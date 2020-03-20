@@ -28,13 +28,13 @@ def special_sandbox_mode_test():
     os.chdir("..")
     decrypt_file(file_input, file_output)
     os.chdir(original_path)
-    su.special_sandbox_mode_users_writer()
-    x2 = su.special_sandbox_mode_users_checker()
-    if x2 is not None:
-        print(x2)
-    else:
-        t.sleep(2)
-        print("\n\nExited successfully!")
+    # su.special_sandbox_mode_users_writer()
+    # x2 = su.special_sandbox_mode_users_checker()
+    # if x2 is not None:
+    #     print(x2)
+    # else:
+    #     t.sleep(2)
+    #     print("\n\nExited successfully!")
     file_input = os.path.join(u[1], y[3])
     file_output = os.path.join(original_path, y[2])
     os.chdir('..')

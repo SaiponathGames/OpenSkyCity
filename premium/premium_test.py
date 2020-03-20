@@ -29,13 +29,13 @@ def premium_test():
     os.chdir("..")
     decrypt_file(file_input, file_output)
     os.chdir(original_path)
-    pu.premium_users_writer()
-    x2 = pu.premium_users_checker()
-    if x2 is not None:
-        print(x2)
-    else:
-        sleep(2)
-        print("\n\nExited successfully!")
+    # pu.premium_users_writer()
+    # x2 = pu.premium_users_checker()
+    # if x2 is not None:
+    #     print(x2)
+    # else:
+    #     sleep(2)
+    #     print("\n\nExited successfully!")
     file_input = os.path.join(u[0], y[1])
     file_output = os.path.join(original_path, y[0])
     os.chdir('..')

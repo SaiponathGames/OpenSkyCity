@@ -1,12 +1,15 @@
-import kivy
+import kivy, os
 from kivy.uix.screenmanager import Screen, ScreenManager, NoTransition
-from opencity_kivy.exit_game_menu import ExitGameScreen
 from kivy.config import Config
 from kivy.lang import Builder
 from kivy.app import App
 kivy.require("1.11.1")
 
+
 Config.set('graphics', 'fullscreen', 'auto')
+
+original_dir = os.path.realpath(os.path.dirname(__file__))
+os.chdir(original_dir)
 
 Builder.load_file("main_menu.kv")
 

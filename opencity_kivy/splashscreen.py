@@ -11,12 +11,16 @@ from kivy.uix.screenmanager import ScreenManager, Screen, NoTransition
 from kivy.animation import Animation
 from kivy.uix.video import Video
 from kivy.core.audio import SoundLoader
-from opencity_kivy.main_menu import ExitGameScreen, MainMenu
+from opencity_kivy.main_menu import MainMenu
+from opencity_kivy.exit_game_menu import ExitGameScreen
 
 
 Config.set('graphics', 'fullscreen', 'auto')
-current_dir = os.path.dirname(os.path.realpath(__file__))
-# print(current_dir)
+
+original_dir = os.path.realpath(os.path.dirname(__file__))
+os.chdir(original_dir)
+
+print(original_dir)
 audio_playback = True
 
 
@@ -75,7 +79,7 @@ class ScreenTwo(Screen):
         do_nothing(*args)
         if audio_playback:
             self.label1.text = "Just a place holder audio"
-            sound1 = SoundLoader.load("OpenCity1.mp3")
+            sound1 = SoundLoader.load(os.path.join(original_dir, "OpenCity1.mp3"))
             sound1.play()
 
     def on_enter(self):
@@ -93,7 +97,7 @@ class ScreenThree(Screen):
 
     def __init__(self, **kwargs):
         super(ScreenThree, self).__init__(**kwargs)
-        self.video1 = Video(source="opencity_kivy/GTAtitles.mpg")
+        self.video1 = Video(source=os.path.join(original_dir, "GTAtitles.mpg"))
         float_layout = FloatLayout()
         self.label1 = Label(text="Just a place holder video", opacity=0, pos_hint={"x": 0, "bottom": 1}, size_hint=[0.2, 0.1])
         # self.label2 = Label(text="loading video", opacity=0)
@@ -166,7 +170,7 @@ class OpenCity123(App):
     def build(self):
         return sm
 
-
+#
 if __name__ == "__main__":
     OpenCity123().run()
     # source = os.path.join(current_dir, "opencityicon.png")
