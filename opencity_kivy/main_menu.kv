@@ -1,0 +1,82 @@
+#:import HoverBehavior hoverbehavior
+#:import App kivy.app.App
+
+<ImageButton@ButtonBehavior+HoverBehavior+Image>
+
+<MainMenu>:
+#    canvas.before:
+#        Rectangle:
+#            source: "opencityicon (1).png"
+#            size: root.size
+    BoxLayout:
+        orientation: "vertical"
+#        Label:
+#            text: "OpenCity"
+#            font_size: 50
+#            color: [1, 0, 1, 1]
+        ImageButton:
+            source: "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\NewGame.png"
+            on_press:
+                self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\NewGameClick.png"
+            on_release:
+                self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\NewGameHover.png"
+            on_enter:
+                self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\NewGameHover.png"
+            on_leave:
+                self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\NewGame.png"
+        BoxLayout:
+            orientation: "horizontal"
+            ImageButton:
+                source: "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\LoadGame.png"
+                on_press:
+                    self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\LoadGameClick.png"
+                on_release:
+                    self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\LoadGameHover.png"
+                on_enter:
+                    self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\LoadGameHover.png"
+                on_leave:
+                    self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\LoadGame.png"
+            ImageButton:
+                source: "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\SaveGame.png"
+                on_press:
+                    self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\SaveGameClick.png"
+                on_release:
+                    self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\SaveGameHover.png"
+                on_enter:
+                    self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\SaveGameHover.png"
+                on_leave:
+                    self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\SaveGame.png"
+        BoxLayout:
+            orientation: "horizontal"
+            ImageButton:
+                source: "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\Settings.png"
+                on_press:
+                    self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\SettingsClick.png"
+                on_release:
+                    self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\SettingsHover.png"
+                on_enter:
+                    self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\SettingsHover.png"
+                on_leave:
+                    self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\Settings.png"
+            ImageButton:
+                source: "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\Credits.png"
+                on_press:
+                    self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\CreditsClick.png"
+                on_release:
+                    self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\CreditsHover.png"
+                on_enter:
+                    self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\CreditsHover.png"
+                on_leave:
+                    self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\Credits.png"
+
+        ImageButton:
+            source: "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\ExitGame.png"
+            on_press:
+                self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\ExitGameClick.png"
+            on_release:
+                self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\ExitGameHover.png"
+                root.manager.current = "exit_game_screen"
+            on_enter:
+                self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\ExitGameHover.png"
+            on_leave:
+                self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\ExitGame.png"

@@ -1,0 +1,38 @@
+<ExitGameScreen>:
+    BoxLayout:
+        orientation: "vertical"
+        BoxLayout:
+            orientation: "horizontal"
+            ImageButton:
+                source: "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\Yes.png"
+                on_press:
+                    self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\YesClick.png"
+                on_release:
+                    self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\YesHover.png"
+                    app.stop()
+                on_enter:
+                    self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\YesHover.png"
+                on_leave:
+                    self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\Yes.png"
+            ImageButton:
+                source: "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\No.png"
+                on_press:
+                    self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\NoClick.png"
+                on_release:
+                    self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\NoHover.png"
+                    root.manager.current = "main_menu"
+                on_enter:
+                    self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\NoHover.png"
+                on_leave:
+                    self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\No.png"
+        ImageButton:
+            source: "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\Back.png"
+            on_press:
+                self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\BackClick.png"
+            on_release:
+                self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\BackHover.png"
+                root.manager.current = "main_menu"
+            on_enter:
+                self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\BackHover.png"
+            on_leave:
+                self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\Back.png"

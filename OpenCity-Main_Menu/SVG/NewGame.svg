@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="NewGame.svg">
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient4799">
+      <stop
+         style="stop-color:#106300;stop-opacity:1"
+         offset="0"
+         id="stop4795" />
+      <stop
+         style="stop-color:#ff0000;stop-opacity:0"
+         offset="1"
+         id="stop4797" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient4791">
+      <stop
+         style="stop-color:#33d940;stop-opacity:1"
+         offset="0"
+         id="stop4787" />
+      <stop
+         style="stop-color:#fe0000;stop-opacity:0"
+         offset="1"
+         id="stop4789" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient4781">
+      <stop
+         style="stop-color:#844c00;stop-opacity:1"
+         offset="0"
+         id="stop4777" />
+      <stop
+         id="stop4785"
+         offset="0.68111211"
+         style="stop-color:#2a9f1b;stop-opacity:0.31764707" />
+      <stop
+         style="stop-color:#00c689;stop-opacity:0"
+         offset="1"
+         id="stop4779" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4781"
+       id="linearGradient4783"
+       x1="232.9624"
+       y1="132.1194"
+       x2="231.34909"
+       y2="210.20375"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4791"
+       id="linearGradient4793"
+       x1="108.09197"
+       y1="81.784042"
+       x2="106.15599"
+       y2="231.17683"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4799"
+       id="linearGradient4801"
+       x1="115.47137"
+       y1="82.363098"
+       x2="113.30793"
+       y2="228.20659"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.82"
+     inkscape:cx="571.29319"
+     inkscape:cy="657.56098"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g4817">
+      <rect
+         y="112.73476"
+         x="-31.496326"
+         height="59.932499"
+         width="290.48129"
+         id="rect4747"
+         style="opacity:1;fill:url(#linearGradient4793);fill-opacity:1;fill-rule:evenodd;stroke:url(#linearGradient4801);stroke-width:5.49550152;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal" />
+      <text
+         id="text4751"
+         y="161.11848"
+         x="-26.154118"
+         style="font-style:normal;font-weight:normal;font-size:50.79999924px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:url(#linearGradient4783);fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="font-size:50.79999924px;stroke-width:0.26458332;fill-opacity:1;fill:url(#linearGradient4783)"
+           y="161.11848"
+           x="-26.154118"
+           id="tspan4749"
+           sodipodi:role="line">New Game</tspan></text>
+    </g>
+  </g>
+</svg>
