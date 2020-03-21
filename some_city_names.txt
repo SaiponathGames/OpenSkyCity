@@ -598,3 +598,403 @@ Magnanville
 Roucy
 Ribeyrol
 Seyning
+Sare Muntaha
+Kossemar Dembell
+N’Yang-en
+Kai Hai
+Barra Kunda
+Salikene
+Darselameh
+Jahabi
+Passimu
+Mbap Marigay
+Ginak Kajata
+Tinkinjo
+Sare Mansong
+Chamoi
+Yambur
+Jakau
+Taibatu
+Digante
+Sitafuma
+Mbol Bouk
+Sinchang
+Jiboroh
+Biram Kardo Ya
+Bantanding
+Daru Lohen
+Gunjur Kuta
+Ker Samba Kumda
+Simbara Ker Mafaal
+Ker Famara
+Sitta
+Fonkoi Kunda
+Giniah
+Hamdalai
+Jasobo
+Tabo Koto
+Sameh
+Bessi
+Wellingara Yoro
+Mbaien Maka
+Jahawur Tukulor
+Dalaba
+Ker Malick Sarr
+Darsilame Ker Koro
+Buduk
+Sare Belali
+Bantan Yima
+Kamunakore
+Faarla
+Kambi
+Bombale
+Johnson Harbour Settlement
+Bombilia House
+Port Stephens
+Salvador Settlement
+Orqueta
+Walker Creek
+Piedra Sola
+Tranquilidad
+Anson
+Port San Carlos
+Hope Cottage
+Port Howard
+Ceritos
+Estancia House
+Fox Bay East Settlement
+Weddell Settlement
+Lively Settlement
+San Carlos
+Teal Inlet
+San Carlos Estate
+Goose Green
+Green Patch Settlement
+New Island Settlement
+Foam Creek House
+Darwin Settlement
+Mid Rancho
+Soledad
+North Arm
+Cerritos
+Rincon Grande
+Hill Cove
+Mariqueta
+Douglas Station
+Dos Lomas
+Dunnose Head Settlement
+Saint Louis
+Salvador Settlement Corral
+Mare Harbour Rancho
+Cantera de Arena
+Port San Carlos Settlement
+Chartres
+Keppel Settlement
+Spring Point
+Beaver Settlement
+Horseshoe Bay
+Mariquita
+Port Stephens Settlement
+Salvador
+Chartres Settlement
+East Settlement
+Coffee Camp
+Twenty Ounce Gully Mining Centre
+Jarrahdale
+Coral Ville
+Detention
+Moockra
+Boat Harbour
+Springcliff
+Railway Estate
+Collinsville
+Halton
+Kiora
+Allendale North
+Yongala Cowie
+Hatfield
+Berrygil
+Undera North
+Windermere
+Welbungin
+Dodges Ferry
+Nurcoung
+Southern Cross
+Baden
+Forest Hill
+Tambourine North
+Tonimbuc
+Leitchville
+Chullora
+Lah-arum
+Farley
+Weithew
+Bentley
+Huntly
+McIlwraith
+Tailem Bend
+Theodore
+Bundook
+Currency Creek
+Glenhope
+Nubba
+Lewis Ponds
+Ghinni Ghinni
+Kyup
+Greg Greg
+Wisanger
+Marnhull
+Sunnyside
+Cobba-da-mana
+S. Grampians
+Glenella
+Capiuasuti
+Ventilla
+Churquiaga
+Carapata
+Kausilla
+Yaretasa
+Kayarani
+Tambillos
+Pericane
+Itiyuro
+Convi
+Pampacasa
+Tikiara
+Huaillamarca
+Chuchulanas
+Pacusal
+Arauco
+Achaca
+Itayove
+Chanqueso
+Chujchi
+Bibosi
+Pezones
+Huayllatiri
+Paita
+Camos
+Almendros
+Piriquina
+Jancoaque
+Brasilia
+Muytha
+Hualaca
+Ivoca
+Colpa
+Pajsipampa
+Tejeria
+Concuma
+Surumí
+Tacacolque
+Tamachindi
+Sipotine
+Istarata
+Tunama
+Basilio
+Molinero
+Patachahui
+Churquipampa
+Misikhuni
+Sacamalla
+Totaicito
+Abberg
+Unterpreppach
+Aichstetten
+Marienfeld
+Wettstetten
+Winnen
+Innerhartsberg
+Genholt
+Haidlfing
+Wendesse
+Bonefeld
+Conneforde
+Wiefhausen
+Kransmoor
+Wagenhoff
+Ranstadt
+Dellfeld
+Wustendorf
+Glessen
+Heiligenmoschel
+Hesseldorf
+Dieskau
+Seulbitz
+Keplershof
+Lemsdorf
+Woffenricht
+Moorgarten
+Ottmannshofen
+Boslar
+Sailtheim
+Wittichenau
+Niewitz
+Hellersberg
+Petersroda
+Kochheim
+Vellahn
+Ramstedtfeld
+Langmeil
+Fronhausen
+Seerams
+Sethlerhemm
+Hochholding
+Reiersdorf
+Settrup
+Rohrenfeld
+Mulda
+Rotschreuth
+Egelinde
+Stierow
+Spittelstein
+Walters
+Kemah
+East Ridge
+Brady Lake
+Glen Rock
+Crystal Mountain
+Marmarth
+Parowan
+Avonmore
+Center Junction
+Scraper
+Plum Branch
+Tierras Nuevas Poniente
+Goodland
+Notre Dame
+Seven Mile Ford
+East Newnan
+Wallula
+Coalgate
+Madison Park
+Ankeny
+Riverbank
+Rutland
+Piney Point Village
+Wantagh
+Cyrus
+Foxholm
+Black River Falls
+Pinon Hills
+Biggers
+Bone Gap
+Fort Drum
+Dowling
+New Sharon
+Goodnight
+Attalla
+Wynne
+Schellsburg
+Fall Branch
+Beemer
+Smithton
+Kutztown
+Adona
+Richburg
+The Hideout
+Bartolo
+Tiverton
+Wolf Trap
+Fairchilds
+Boxholm
+Carlinville
+Cave-In-Rock
+Ladoga
+Bethel Acres
+North Lilbourn
+Little Sturgeon
+Pascola
+Amarillo
+Waverly City
+Wilkerson
+Mosby
+Grasonville
+Quilcene
+Talking Rock
+Westwood Shores
+Tanque Verde
+White Island Shores
+D'Lo
+Springport
+Cheshire Village
+Saco
+Bushyhead
+Olsburg
+Molino
+Blacklick Estates
+Oak Ridge
+Grayville
+Inver Grove Heights
+Harkers Island
+Corte Madera
+Nemaha
+Gas
+Salunga
+Pretty Prairie
+Ambridge
+Centre
+Kennedy Meadows
+Temple Hills
+Sims
+Silesia
+Varnado
+Fidelis
+Kenhorst
+Stidham
+Gillett
+Avinger
+Chesnee
+Dobbins Heights
+Downieville
+Winnebago
+Mehkenli
+Sidiklibuyukoba
+Sazlikbasi
+Devrek
+Findik
+Kurtulmuş
+Guryaprak
+Delialo
+Salanda
+Kutuklupinar
+Takbaş
+Kabuchinar
+Abadan
+Irmak
+Nimetli
+Durhasandede
+Atlas
+Sepetoren
+Bolucekkaya
+Akoluk
+Uzunhidir
+Dongelli
+Minkarap
+Sergelliide
+Siyilli
+Satylsyukran
+Beynamazlı
+Borekli
+Mandafar
+Cinatahiso
+Ikizler
+Yeniergine
+Kizik
+Eliveyan
+Kharaberesi
+Aylac
+Gedemorza
+Manda
+Kaymakli
+Sarykoch
+Kapucular
+Sayfiye
+Delil
+Ininis
+Kesirven
+Geriç
+Sipali
+Tarloagzi
+Turunç
+Mamuraş
