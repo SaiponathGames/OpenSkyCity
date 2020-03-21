@@ -1,10 +1,10 @@
-import kivy, os
-from kivy.uix.screenmanager import Screen, ScreenManager, NoTransition
+import kivy
+import os
 from kivy.config import Config
 from kivy.lang import Builder
-from kivy.app import App
-kivy.require("1.11.1")
+from kivy.uix.screenmanager import Screen
 
+kivy.require("1.11.1")
 
 Config.set('graphics', 'fullscreen', 'auto')
 
@@ -15,8 +15,7 @@ Builder.load_file("main_menu.kv")
 
 
 class MainMenu(Screen):
-    pass
-
+	pass
 
 # sm = ScreenManager(transition=NoTransition())
 # sm.add_widget(MainMenu(name='mainmenu'))

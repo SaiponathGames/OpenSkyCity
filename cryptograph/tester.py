@@ -1,5 +1,7 @@
-from cryptograph import key_reader as kr
 from cryptography.fernet import Fernet
+
+from cryptograph import key_reader as kr
+
 x = 0
 y = 0
 keys = kr.read_keys()
@@ -8,10 +10,10 @@ input_file = x
 output_file = y
 
 with open(input_file, 'rb') as f:
-    data = f.read()
+	data = f.read()
 
 f2 = Fernet(key)
 encrypted = f2.encrypt(data)
 
 with open(output_file, 'wb') as f:
-    f.write(encrypted)
+	f.write(encrypted)
