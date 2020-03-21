@@ -146,6 +146,12 @@ class ScreenThree(Screen):
 		self.video1.opacity = 1
 
 
+class PythonSplash(Screen):
+	def __init__(self, **kwargs):
+		super(PythonSplash, self).__init__(**kwargs)
+		self.img1 = Image()
+
+
 sm = ScreenManager(transition=NoTransition())
 sm.add_widget(ScreenOne(name="screen_one"))
 sm.add_widget(ScreenTwo(name="screen_two"))
