@@ -98,7 +98,7 @@ class ScreenThree(Screen):
 
 	def __init__(self, **kwargs):
 		super(ScreenThree, self).__init__(**kwargs)
-		self.video1 = Video(source=os.path.join(original_dir, "GTAtitles.mpg"))
+		self.video1 = Video(source=os.path.join(original_dir, "cityCC0.mpg"))
 		float_layout = FloatLayout()
 		self.label1 = Label(text="Just a place holder video", opacity=0, pos_hint={"x": 0, "bottom": 1}, size_hint=[0.2, 0.1])
 		# self.label2 = Label(text="loading video", opacity=0)
