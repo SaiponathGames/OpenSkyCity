@@ -1,7 +1,10 @@
 #:import os os
 #:import ButtonBehavior kivy.uix.behaviors.ButtonBehavior
 #:import HoverBehavior opencity_kivy.hoverbehavior
-#:import original_dir exit_game_menu.original_dir
+# #:import original_dir opencity_kivy.exit_game_menu.original_dir
+
+#:set original_dir os.path.realpath(os.path.dirname('exit_game_menu.kv'))
+
 <ImageButton@ButtonBehavior+HoverBehavior+Image>
 
 <ExitGameScreen>:

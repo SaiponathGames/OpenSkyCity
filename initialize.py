@@ -1,6 +1,6 @@
 class OpenCity:
 	build = "0.00.000.0141"
-	Version = "v1.4.1"
+	Version = "v1.4.6"
 	Premium = True
 	Special_sandbox = True
 	debug = False
@@ -20,4 +20,4 @@ if __name__ == '__main__':
 	print()
 	st()
 	print()
-	ss.OpenCity123().run()
+	ss.OpenCityApp().run()

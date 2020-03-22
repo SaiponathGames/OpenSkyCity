@@ -1,11 +1,11 @@
 import os
-from functools import partial
 
 from kivy.animation import Animation
 from opencity_kivy.myanimation import MyAnimation
 from kivy.app import App
 from kivy.clock import Clock
 from kivy.config import Config
+Config.set('graphics', 'fullscreen', '0')
 from kivy.core.audio import SoundLoader
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.floatlayout import FloatLayout
@@ -13,11 +13,14 @@ from kivy.uix.image import Image
 from kivy.uix.label import Label
 from kivy.uix.screenmanager import NoTransition, Screen, ScreenManager
 from kivy.uix.video import Video
-
 from opencity_kivy.exit_game_menu import ExitGameScreen
 from opencity_kivy.main_menu import MainMenu
+from kivy.core.window import Window
 
-Config.set('graphics', 'fullscreen', '0')
+
+
+
+
 
 original_dir = os.path.realpath(os.path.dirname(__file__))
 os.chdir(original_dir)
@@ -198,13 +201,14 @@ def change_screen_to(screen, *args):
 # Clock.schedule_once(Window.close, 32)
 
 
-class OpenCity123(App):
+class OpenCityApp(App):
 	def build(self):
+		Window.set_icon("OpenCity Icon.png")
 		return sm
 
 
 #
 if __name__ == "__main__":
-	OpenCity123().run()
+	OpenCityApp().run()
 	# source = os.path.join(current_dir, "opencityicon.png")
 	# Label(text="OpenCity", font_size=150, opacity=0)
