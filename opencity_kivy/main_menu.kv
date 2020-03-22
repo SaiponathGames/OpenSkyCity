@@ -1,5 +1,7 @@
+#:import original_dir exit_game_menu.original_dir
 #:import HoverBehavior opencity_kivy.hoverbehavior
 #:import App kivy.app.App
+#:import os os
 
 <ImageButton@ButtonBehavior+HoverBehavior+Image>
 
@@ -15,68 +17,68 @@
 #            font_size: 50
 #            color: [1, 0, 1, 1]
         ImageButton:
-            source: "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\NewGame.png"
+            source: os.path.join(original_dir,"OpenCity-Main_Menu\\PNG\\NewGame.png")
             on_press:
-                self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\NewGameClick.png"
+                self.source = os.path.join(original_dir,"OpenCity-Main_Menu\\PNG\\NewGameClick.png")
             on_release:
-                self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\NewGameHover.png"
+                self.source = os.path.join(original_dir,"OpenCity-Main_Menu\\PNG\\NewGameHover.png")
             on_enter:
-                self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\NewGameHover.png"
+                self.source = os.path.join(original_dir,"OpenCity-Main_Menu\\PNG\\NewGameHover.png")
             on_leave:
-                self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\NewGame.png"
+                self.source = os.path.join(original_dir,"OpenCity-Main_Menu\\PNG\\NewGame.png")
         BoxLayout:
             orientation: "horizontal"
             ImageButton:
-                source: "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\LoadGame.png"
+                source: os.path.join(original_dir,"OpenCity-Main_Menu\\PNG\\LoadGame.png")
                 on_press:
-                    self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\LoadGameClick.png"
+                    self.source = os.path.join(original_dir,"OpenCity-Main_Menu\\PNG\\LoadGameClick.png")
                 on_release:
-                    self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\LoadGameHover.png"
+                    self.source = os.path.join(original_dir,"OpenCity-Main_Menu\\PNG\\LoadGameHover.png")
                 on_enter:
-                    self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\LoadGameHover.png"
+                    self.source = os.path.join(original_dir,"OpenCity-Main_Menu\\PNG\\LoadGameHover.png")
                 on_leave:
-                    self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\LoadGame.png"
+                    self.source = os.path.join(original_dir,"OpenCity-Main_Menu\\PNG\\LoadGame.png")
             ImageButton:
-                source: "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\SaveGame.png"
+                source: os.path.join(original_dir,"OpenCity-Main_Menu\\PNG\\SaveGame.png")
                 on_press:
-                    self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\SaveGameClick.png"
+                    self.source = os.path.join(original_dir,"OpenCity-Main_Menu\\PNG\\SaveGameClick.png")
                 on_release:
-                    self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\SaveGameHover.png"
+                    self.source = os.path.join(original_dir,"OpenCity-Main_Menu\\PNG\\SaveGameHover.png")
                 on_enter:
-                    self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\SaveGameHover.png"
+                    self.source = os.path.join(original_dir,"OpenCity-Main_Menu\\PNG\\SaveGameHover.png")
                 on_leave:
-                    self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\SaveGame.png"
+                    self.source = os.path.join(original_dir,"OpenCity-Main_Menu\\PNG\\SaveGame.png")
         BoxLayout:
             orientation: "horizontal"
             ImageButton:
-                source: "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\Settings.png"
+                source: os.path.join(original_dir,"OpenCity-Main_Menu\\PNG\\Settings.png")
                 on_press:
-                    self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\SettingsClick.png"
+                    self.source = os.path.join(original_dir,"OpenCity-Main_Menu\\PNG\\SettingsClick.png")
                 on_release:
-                    self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\SettingsHover.png"
+                    self.source = os.path.join(original_dir,"OpenCity-Main_Menu\\PNG\\SettingsHover.png")
                 on_enter:
-                    self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\SettingsHover.png"
+                    self.source = os.path.join(original_dir,"OpenCity-Main_Menu\\PNG\\SettingsHover.png")
                 on_leave:
-                    self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\Settings.png"
+                    self.source = os.path.join(original_dir,"OpenCity-Main_Menu\\PNG\\Settings.png")
             ImageButton:
-                source: "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\Credits.png"
+                source: os.path.join(original_dir,"OpenCity-Main_Menu\\PNG\\Credits.png")
                 on_press:
-                    self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\CreditsClick.png"
+                    self.source = os.path.join(original_dir,"OpenCity-Main_Menu\\PNG\\CreditsClick.png")
                 on_release:
-                    self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\CreditsHover.png"
+                    self.source = os.path.join(original_dir,"OpenCity-Main_Menu\\PNG\\CreditsHover.png")
                 on_enter:
-                    self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\CreditsHover.png"
+                    self.source = os.path.join(original_dir,"OpenCity-Main_Menu\\PNG\\CreditsHover.png")
                 on_leave:
-                    self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\Credits.png"
+                    self.source = os.path.join(original_dir,"OpenCity-Main_Menu\\PNG\\Credits.png")
 
         ImageButton:
-            source: "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\ExitGame.png"
+            source: os.path.join(original_dir,"OpenCity-Main_Menu\\PNG\\ExitGame.png")
             on_press:
-                self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\ExitGameClick.png"
+                self.source = os.path.join(original_dir,"OpenCity-Main_Menu\\PNG\\ExitGameClick.png")
             on_release:
-                self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\ExitGameHover.png"
+                self.source = os.path.join(original_dir,"OpenCity-Main_Menu\\PNG\\ExitGameHover.png")
                 root.manager.current = "exit_game_screen"
             on_enter:
-                self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\ExitGameHover.png"
+                self.source = os.path.join(original_dir,"OpenCity-Main_Menu\\PNG\\ExitGameHover.png")
             on_leave:
-                self.source = "F:\\PyCharm Python Works\\OpenCity\\OpenCity-Main_Menu\\PNG\\ExitGame.png"
+                self.source = os.path.join(original_dir,"OpenCity-Main_Menu\\PNG\\ExitGame.png")

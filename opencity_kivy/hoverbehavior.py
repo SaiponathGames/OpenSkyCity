@@ -3,6 +3,8 @@ License: LGPL
 """
 __author__ = 'Olivier POYEN'
 
+__all__ = ['HoverBehavior']
+
 from kivy.core.window import Window
 from kivy.properties import BooleanProperty, ObjectProperty
 

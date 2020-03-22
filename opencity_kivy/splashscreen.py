@@ -2,6 +2,7 @@ import os
 from functools import partial
 
 from kivy.animation import Animation
+from opencity_kivy.myanimation import MyAnimation
 from kivy.app import App
 from kivy.clock import Clock
 from kivy.config import Config
@@ -74,7 +75,7 @@ class ScreenTwo(Screen):
 			self.label1.text = ""
 			change_screen_to('screen_three')
 		if not audio_playback:
-			change_screen_to('main_menu')
+			change_screen_to('kivy_splash')
 
 	def on_anim1_start(self, *args):
 		do_nothing(*args)
@@ -124,7 +125,7 @@ class ScreenThree(Screen):
 		# print(self.video1.loaded)
 		# Clock.schedule_once(self.video1_play)
 		audio_playback = False
-		Clock.schedule_once(partial(change_screen_to, 'screen_two'), 0)
+		change_screen_to('screen_two')
 		# self.event1.cancel()
 
 	def on_enter(self):
@@ -146,24 +147,48 @@ class ScreenThree(Screen):
 		self.video1.opacity = 1
 
 
-# class PythonSplash(Screen):
-# 	def __init__(self, **kwargs):
-# 		super(PythonSplash, self).__init__(**kwargs)
-# 		self.img1 = Image()
+class KivySplash(Screen):
+	def __init__(self, **kwargs):
+		super(KivySplash, self).__init__(**kwargs)
+		anim1 = MyAnimation(duration=4, opacity=0)
+		anim1.bind(on_complete=self.on_anim1_complete)
+		self.animation = MyAnimation(duration=3) + MyAnimation(duration=4, opacity=1) + MyAnimation(duration=5) + anim1
+		self.img1 = Image(source=os.path.join(original_dir, "Kivy-logo-black-512.png"), opacity=0)
+		self.img2 = Image(source=os.path.join(original_dir, "python-powered-w-200x80.png"))
+		self.label1 = Label(text="Powered by:", font_size=48)
+		box_layout = BoxLayout(orientation="vertical")
+		box_layout1 = BoxLayout()
+		box_layout.add_widget(self.label1)
+		box_layout1.add_widget(self.img1)
+		box_layout1.add_widget(self.img2)
+		box_layout.add_widget(box_layout1)
+		self.add_widget(box_layout)
+
+	def on_anim1_complete(self, *args):
+		do_nothing(self, *args)
+		if self.img1 in self.animation.animated_widgets:
+			pass
+
+
+
+
+	def on_enter(self, *args):
+		self.animation.start(self.img1)
+		self.animation.start(self.img2)
 
 
 sm = ScreenManager(transition=NoTransition())
 sm.add_widget(ScreenOne(name="screen_one"))
 sm.add_widget(ScreenTwo(name="screen_two"))
 sm.add_widget(ScreenThree(name="screen_three"))
+sm.add_widget(KivySplash(name="kivy_splash"))
 sm.add_widget(MainMenu(name="main_menu"))
 sm.add_widget(ExitGameScreen(name="exit_game_screen"))
 sm.current = "screen_one"
 
 
 def change_screen_to(screen, *args):
-	for arg in args:
-		do_nothing(arg)
+	do_nothing(*args)
 	sm.current = screen
 
 

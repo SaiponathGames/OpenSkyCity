@@ -2,16 +2,20 @@
   <dictionary name="kanna">
     <words>
       <w>abcdef</w>
+      <w>anim</w>
       <w>appdata</w>
       <w>cityname</w>
       <w>cryptograph</w>
       <w>dccdc</w>
+      <w>hoverbehavior</w>
       <w>hvou</w>
+      <w>kivy</w>
       <w>lawl</w>
       <w>localappdata</w>
       <w>mapname</w>
       <w>mapnames</w>
       <w>navin</w>
+      <w>opencity</w>
       <w>sairam</w>
       <w>ssssm</w>
       <w>stri</w>
