@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="24d91d9c-ae43-413d-8923-872a888180d9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files_and_folders/files_and_folder_creator.py" beforeDir="false" afterPath="$PROJECT_DIR$/files_and_folders/files_and_folder_creator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencity_kivy/exit_game_menu.kv" beforeDir="false" afterPath="$PROJECT_DIR$/opencity_kivy/exit_game_menu.kv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/premium/premium_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/premium/premium_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/special_sandbox/special_sandbox_mode_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/special_sandbox/special_sandbox_mode_test.py" afterDir="false" />
-    </list>
+    <list default="true" id="24d91d9c-ae43-413d-8923-872a888180d9" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
