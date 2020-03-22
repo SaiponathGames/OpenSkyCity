@@ -1,12 +1,10 @@
 def special_sandbox_mode_test():
 	import os
-	from initialization.initialize import OpenCity
 	from cryptograph.file_encryptor import encrypt_file
 	from cryptograph.file_decryptor import decrypt_file
 	from file import file
 	from files.file_reader import file_reader
 	from dirs.dir_reader import dir_reader
-	type(OpenCity)
 	original_path = os.path.realpath(os.path.dirname(__file__))
 	os.chdir("..")
 	x, u = dir_reader('paths.txt')
