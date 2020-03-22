@@ -3,14 +3,14 @@ def folder_and_file_creator():
 	import random as r
 	from dirs import dir_reader, dir_checker
 	from files import file_reader, file_checker
-	from initialization.intialize import OpenCity
+	from initialization.initialize import OpenCity
 
 	original_path = os.path.realpath(os.path.dirname(__file__))
 	os.chdir(original_path)
 	type(OpenCity)
 	os.chdir("..")
 	mapnames = []
-	f1 = open("some_city_names.txt", "r")
+	f1 = open("some_city_names.txt", "r", 1, "utf-8")
 	for cityname in f1:
 		cityname1 = cityname.replace("\n", "")
 		mapnames.append(cityname1)

@@ -1,6 +1,6 @@
 def special_sandbox_mode_test():
 	import os
-	from initialization.intialize import OpenCity
+	from initialization.initialize import OpenCity
 	from cryptograph.file_encryptor import encrypt_file
 	from cryptograph.file_decryptor import decrypt_file
 	from file import file

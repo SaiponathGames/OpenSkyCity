@@ -16,7 +16,7 @@ from kivy.uix.video import Video
 from opencity_kivy.exit_game_menu import ExitGameScreen
 from opencity_kivy.main_menu import MainMenu
 
-Config.set('graphics', 'fullscreen', 'auto')
+Config.set('graphics', 'fullscreen', '0')
 
 original_dir = os.path.realpath(os.path.dirname(__file__))
 os.chdir(original_dir)

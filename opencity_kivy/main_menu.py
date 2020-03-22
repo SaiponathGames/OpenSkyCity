@@ -6,8 +6,6 @@ from kivy.uix.screenmanager import Screen
 
 kivy.require("1.11.1")
 
-Config.set('graphics', 'fullscreen', 'auto')
-
 original_dir = os.path.realpath(os.path.dirname(__file__))
 os.chdir(original_dir)
 
