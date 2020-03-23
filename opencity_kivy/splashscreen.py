@@ -16,6 +16,7 @@ from kivy.uix.video import Video
 from opencity_kivy.exit_game_menu import ExitGameScreen
 from opencity_kivy.main_menu import MainMenu
 from kivy.core.window import Window
+from kivy.properties import StringProperty
 
 
 
@@ -157,8 +158,8 @@ class KivySplash(Screen):
 		anim1.bind(on_complete=self.on_anim1_complete)
 		self.animation = MyAnimation(duration=3) + MyAnimation(duration=4, opacity=1) + MyAnimation(duration=5) + anim1
 		self.img1 = Image(source=os.path.join(original_dir, "Kivy-logo-black-512.png"), opacity=0)
-		self.img2 = Image(source=os.path.join(original_dir, "python-powered-w-200x80.png"))
-		self.label1 = Label(text="Powered by:", font_size=48)
+		self.img2 = Image(source=os.path.join(original_dir, "python-powered-w-200x80.png"), opacity=0)
+		self.label1 = Label(text="Powered by:", font_size=48, opacity=0)
 		box_layout = BoxLayout(orientation="vertical")
 		box_layout1 = BoxLayout()
 		box_layout.add_widget(self.label1)
@@ -172,12 +173,12 @@ class KivySplash(Screen):
 		if self.img1 in self.animation.animated_widgets:
 			pass
 
-
-
-
 	def on_enter(self, *args):
-		self.animation.start(self.img1)
-		self.animation.start(self.img2)
+		for widget in (self.img1, self.img2, self.label1):
+			anim1 = MyAnimation(duration=4, opacity=0)
+			anim1.bind(on_complete=self.on_anim1_complete)
+			animation = MyAnimation(duration=3) + MyAnimation(duration=4, opacity=1) + MyAnimation(duration=5) + anim1
+			animation.start(widget)
 
 
 sm = ScreenManager(transition=NoTransition())
@@ -202,8 +203,9 @@ def change_screen_to(screen, *args):
 
 
 class OpenCityApp(App):
+	icon = StringProperty(os.path.join(original_dir, "OpenCity Icon.png"))
+
 	def build(self):
-		Window.set_icon("OpenCity Icon.png")
 		return sm
 
 
