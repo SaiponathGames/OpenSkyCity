@@ -125,5 +125,4 @@ dmypy.json
 .pyre/
 
 
-.iml
-.xml
+.idea/
