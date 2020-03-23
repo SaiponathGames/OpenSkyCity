@@ -174,10 +174,10 @@ class KivySplash(Screen):
 			pass
 
 	def on_enter(self, *args):
-		for widget in (self.img1, self.img2, self.label1):
-			anim1 = MyAnimation(duration=4, opacity=0)
+		for i, widget in enumerate((self.img1, self.img2, self.label1)):
+			anim1 = MyAnimation(duration=4 + i, opacity=0)
 			anim1.bind(on_complete=self.on_anim1_complete)
-			animation = MyAnimation(duration=3) + MyAnimation(duration=4, opacity=1) + MyAnimation(duration=5) + anim1
+			animation = MyAnimation(duration=3) + MyAnimation(duration=4 + i, opacity=1) + MyAnimation(duration=5) + anim1
 			animation.start(widget)
 
 
