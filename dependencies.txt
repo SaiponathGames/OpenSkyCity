@@ -1,0 +1,4 @@
+Dependencies of OpenCity:
+1. Cryptography
+2. ObjCrypt
+2. 
