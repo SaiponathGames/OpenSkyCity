@@ -7,12 +7,12 @@ __author__ = ['John Anderson', 'Sairam']
 
 class MySequence(Sequence):
     widgets = ListProperty([])
-    animated_widgets = ListProperty()
+    animated_widgets = ListProperty([])
 
     def start(self, widget):
-        super(MySequence, self).start(widget)
         self.widgets.append(widget)
         self.animated_widgets.append(widget)
+        super(MySequence, self).start(widget)
 
     def stop(self, widget):
         if widget in self.widgets:
@@ -28,12 +28,12 @@ class MySequence(Sequence):
 
 class MyParallel(Parallel):
     widgets = ListProperty([])
-    animated_widgets = ListProperty()
+    animated_widgets = ListProperty([])
 
     def start(self, widget):
-        super(MyParallel, self).start(widget)
         self.widgets.append(widget)
         self.animated_widgets.append(widget)
+        super(MyParallel, self).start(widget)
 
     def stop(self, widget):
         if widget in self.widgets:
@@ -49,12 +49,12 @@ class MyParallel(Parallel):
 
 class MyAnimation(Animation):
     widgets = ListProperty([])
-    animated_widgets = ListProperty()
+    animated_widgets = ListProperty([])
 
     def start(self, widget):
-        super(MyAnimation, self).start(widget)
         self.widgets.append(widget)
         self.animated_widgets.append(widget)
+        super(MyAnimation, self).start(widget)
 
     def stop(self, widget):
         if widget in self.widgets:

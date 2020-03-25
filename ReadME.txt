@@ -12,8 +12,9 @@ Hello everyone, I am Sairam, the developer of OpenCity, A city simulation game, 
 2. Extract it.
 3. Get Python 3.7
 4. Get Kivy 1.11.1
-5. Run initialization/initialize.py
-6. Done!!!
+5. Run initialize.py
+6. For testing the game if the game works correctly. Check your users folder and Appdata/Local folders.
+There will some folders like plugins, special_sandbox, premium. If you find them, then the game is working properly.
 _____________________________________________________________________________________________________________________________________________________________________________________________________________
 
 Nothing is on the game execpt MainMenu!!!

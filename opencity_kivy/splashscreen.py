@@ -5,7 +5,7 @@ from opencity_kivy.myanimation import MyAnimation
 from kivy.app import App
 from kivy.clock import Clock
 from kivy.config import Config
-Config.set('graphics', 'fullscreen', '0')
+Config.set('graphics', 'fullscreen', 'auto')
 from kivy.core.audio import SoundLoader
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.floatlayout import FloatLayout
@@ -16,11 +16,7 @@ from kivy.uix.video import Video
 from opencity_kivy.exit_game_menu import ExitGameScreen
 from opencity_kivy.main_menu import MainMenu
 from kivy.core.window import Window
-from kivy.properties import StringProperty
-
-
-
-
+from kivy.properties import StringProperty, NumericProperty
 
 
 original_dir = os.path.realpath(os.path.dirname(__file__))
@@ -154,12 +150,17 @@ class ScreenThree(Screen):
 class KivySplash(Screen):
 	def __init__(self, **kwargs):
 		super(KivySplash, self).__init__(**kwargs)
-		anim1 = MyAnimation(duration=4, opacity=0)
-		anim1.bind(on_complete=self.on_anim1_complete)
-		self.animation = MyAnimation(duration=3) + MyAnimation(duration=4, opacity=1) + MyAnimation(duration=5) + anim1
+		# anim1 = MyAnimation(duration=4, opacity=0)
+		# anim1.bind(on_complete=self.on_anim1_complete)
+		# self.animation1 = MyAnimation(duration=3) + MyAnimation(duration=4, opacity=1) + MyAnimation(duration=5) + anim1
 		self.img1 = Image(source=os.path.join(original_dir, "Kivy-logo-black-512.png"), opacity=0)
 		self.img2 = Image(source=os.path.join(original_dir, "python-powered-w-200x80.png"), opacity=0)
 		self.label1 = Label(text="Powered by:", font_size=48, opacity=0)
+		anim1 = MyAnimation(duration=4, opacity=0)
+		self.i1 = 0
+		self.animated_objects = []
+		anim1.bind(on_complete=self.on_anim1_complete)
+		self.animation = MyAnimation(duration=3 + self.i1)
 		box_layout = BoxLayout(orientation="vertical")
 		box_layout1 = BoxLayout()
 		box_layout.add_widget(self.label1)
@@ -168,17 +169,18 @@ class KivySplash(Screen):
 		box_layout.add_widget(box_layout1)
 		self.add_widget(box_layout)
 
-	def on_anim1_complete(self, *args):
-		do_nothing(self, *args)
-		if self.img1 in self.animation.animated_widgets:
-			pass
-
 	def on_enter(self, *args):
-		for i, widget in enumerate((self.img1, self.img2, self.label1)):
+		for i, widget in enumerate((self.label1, self.img2, self.img1)):
 			anim1 = MyAnimation(duration=4, opacity=0)
 			anim1.bind(on_complete=self.on_anim1_complete)
-			animation = MyAnimation(duration=3 + i) + MyAnimation(duration=4, opacity=1) + MyAnimation(duration=5 - i) + anim1
-			animation.start(widget)
+			self.animation = MyAnimation(duration=3 + i) + MyAnimation(duration=4, opacity=1) + MyAnimation(duration=5 - i) + anim1
+			self.animation.start(widget)
+			self.animated_objects.append(widget)
+
+	def on_anim1_complete(self, *args):
+		do_nothing(self, *args)
+		if self.label1 in self.animated_objects:
+			change_screen_to("main_menu")
 
 
 sm = ScreenManager(transition=NoTransition())
