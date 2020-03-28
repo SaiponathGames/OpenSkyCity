@@ -54,7 +54,7 @@ class ScreenOne(Screen):
 class ScreenTwo(Screen):
 	def __init__(self, **kwargs):
 		super().__init__(**kwargs)
-		self.img2 = Image(source="OpenCity Icon.png", opacity=0)
+		self.img2 = Image(source="OpenCity_Icon.png", opacity=0)
 		self.img3 = Image(source="opencityicon (1).png", opacity=0)
 		self.label1 = Label(text="Just a place holder audio", opacity=0, pos_hint={"x": 0, "bottom": 1}, size_hint=[0.2, 0.1])
 		your_anim = Animation(d=4, opacity=1)
@@ -205,7 +205,7 @@ def change_screen_to(screen, *args):
 
 
 class OpenCityApp(App):
-	icon = StringProperty(os.path.join(original_dir, "OpenCity Icon.png"))
+	icon = StringProperty(os.path.join(original_dir, "OpenCity_Icon.png"))
 
 	def build(self):
 		return sm
