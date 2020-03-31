@@ -1,5 +1,5 @@
 Dependencies of OpenCity:
 1. Kivy
-2. Cryptography
-3. ObjCrypt
+2. PyCryptodome
+3. PyMongo
 4. All kivy_deps including Gstreamer.
