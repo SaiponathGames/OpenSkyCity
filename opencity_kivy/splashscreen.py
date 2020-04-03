@@ -1,7 +1,7 @@
 import os
 
 from kivy.animation import Animation
-from opencity_kivy.myanimation import MyAnimation
+from myanimation import MyAnimation
 from kivy.app import App
 from kivy.clock import Clock
 from kivy.config import Config
@@ -13,8 +13,8 @@ from kivy.uix.image import Image
 from kivy.uix.label import Label
 from kivy.uix.screenmanager import NoTransition, Screen, ScreenManager
 from kivy.uix.video import Video
-from opencity_kivy.exit_game_menu import ExitGameScreen
-from opencity_kivy.main_menu import MainMenu
+from exit_game_menu import ExitGameScreen
+from main_menu import MainMenu
 from kivy.core.window import Window
 from kivy.properties import StringProperty, NumericProperty
 

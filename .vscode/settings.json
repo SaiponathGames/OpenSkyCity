@@ -1,4 +1,5 @@
 {
+<<<<<<< Updated upstream
     "files.exclude": {
         "**/.classpath": true,
         "**/.project": true,
@@ -19,4 +20,7 @@
     "python.testing.pytestArgs": [
         "tester"
     ]
+=======
+    "python.pythonPath": "venv\\Scripts\\python.exe"
+>>>>>>> Stashed changes
 }
