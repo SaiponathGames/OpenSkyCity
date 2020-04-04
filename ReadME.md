@@ -9,7 +9,7 @@ This is a Work In Progress game!
 
 Hello everyone, I am Sairam, the developer of OpenCity, A city simulation game, with 3d graphics, for now I have done 2% of game! The SplashScreen I didn't have good video to place in VideoPlaceHolder.
 
-1. Download the file from GitHub.
+1. Download the files from GitHub.
 2. Extract it.
 3. Get Python 3.8.2 from https://www.python.org/downloads/release/python-382/
 4. Get Kivy 1.11.1 from https://kivy.org/doc/stable/installation/installation-windows.html
