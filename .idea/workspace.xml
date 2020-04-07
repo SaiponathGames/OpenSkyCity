@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="24d91d9c-ae43-413d-8923-872a888180d9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/initialize.py" beforeDir="false" afterPath="$PROJECT_DIR$/initialize.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencity_kivy/exit_game_menu.kv" beforeDir="false" afterPath="$PROJECT_DIR$/opencity_kivy/exit_game_menu.kv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencity_kivy/main_menu.kv" beforeDir="false" afterPath="$PROJECT_DIR$/opencity_kivy/main_menu.kv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencity_kivy/main_menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencity_kivy/main_menu.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencity_kivy/splashscreen.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencity_kivy/splashscreen.py" afterDir="false" />
-    </list>
+    <list default="true" id="24d91d9c-ae43-413d-8923-872a888180d9" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -198,7 +191,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1577280871006</updated>
-      <workItem from="1586253599907" duration="3240000" />
+      <workItem from="1586253599907" duration="3513000" />
     </task>
     <task id="LOCAL-00001" summary="Added sound effect">
       <created>1584855659859</created>
