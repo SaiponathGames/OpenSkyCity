@@ -1,6 +1,6 @@
 class OpenCity:
-	build = "0.00.000.0147"
-	Version = "v1.4.7"
+	build = "0.00.000.0148"
+	Version = "v1.4.8"
 	Premium = True
 	Special_sandbox = True
 	debug = False
