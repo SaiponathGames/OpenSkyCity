@@ -1,7 +1,7 @@
 import os
 
 from kivy.animation import Animation
-from myanimation import MyAnimation
+from opencity_kivy.myanimation import MyAnimation
 from kivy.app import App
 from kivy.clock import Clock
 from kivy.config import Config
@@ -13,10 +13,9 @@ from kivy.uix.image import Image
 from kivy.uix.label import Label
 from kivy.uix.screenmanager import NoTransition, Screen, ScreenManager
 from kivy.uix.video import Video
-from exit_game_menu import ExitGameScreen
-from main_menu import MainMenu
-from kivy.core.window import Window
-from kivy.properties import StringProperty, NumericProperty
+from opencity_kivy.exit_game_menu import ExitGameScreen
+from opencity_kivy.main_menu import MainMenu
+from kivy.properties import StringProperty
 
 
 original_dir = os.path.realpath(os.path.dirname(__file__))
@@ -207,8 +206,15 @@ def change_screen_to(screen, *args):
 class OpenCityApp(App):
 	icon = StringProperty(os.path.join(original_dir, "OpenCity_Icon.png"))
 
+	def __init__(self, **kwargs):
+		super(OpenCityApp, self).__init__(**kwargs)
+		self.sound1 = SoundLoader.load(os.path.join(original_dir, "button_press.mp3"))
+
 	def build(self):
 		return sm
+
+	def play_button_sound(self):
+		self.sound1.play()
 
 
 #
