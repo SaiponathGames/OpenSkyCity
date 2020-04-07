@@ -1,7 +1,7 @@
 """Hoverable Behaviour (changing when the mouse is on the widget by O. Poyen.
 License: LGPL
 """
-__author__ = 'Olivier POYEN'
+__author__ = ['Olivier POYEN', 'Sairam']
 
 __all__ = ['HoverBehavior']
 

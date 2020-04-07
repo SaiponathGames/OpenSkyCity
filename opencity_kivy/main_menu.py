@@ -31,23 +31,23 @@ class MainMenu(Screen):
 	pass
 
 
-sm = ScreenManager(transition=NoTransition())
-sm.add_widget(MainMenu(name='main_menu'))
-# sm.add_widget(ExitGameScreen(name='exitgamescreen'))
-sm.current = 'main_menu'
-
-
-class OpenCity12(App):
-	def __init__(self, **kwargs):
-		super(OpenCity12, self).__init__(**kwargs)
-		self.sound1 = SoundLoader.load("button_press.mp3")
-
-	def build(self):
-		return sm
-
-	def play_button_sound(self):
-		self.sound1.play()
-
+# sm = ScreenManager(transition=NoTransition())
+# sm.add_widget(MainMenu(name='main_menu'))
+# # sm.add_widget(ExitGameScreen(name='exitgamescreen'))
+# sm.current = 'main_menu'
+#
+#
+# class OpenCity12(App):
+# 	def __init__(self, **kwargs):
+# 		super(OpenCity12, self).__init__(**kwargs)
+# 		self.sound1 = SoundLoader.load("button_press.mp3")
+#
+# 	def build(self):
+# 		return sm
+#
+# 	def play_button_sound(self):
+# 		self.sound1.play()
+#
 
 # class OpenCity1:
 #     def __init__(self, **kwargs):
