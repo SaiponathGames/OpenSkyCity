@@ -1,9 +1,15 @@
 import kivy
 import os
+from kivy.uix.behaviors import ButtonBehavior
+from kivy.uix.image import Image
+from opencity_kivy.hoverbehavior import HoverBehavior
 from kivy.app import App
 from kivy.config import Config
+
+Config.set("kivy", "log_level", "debug")
 from kivy.lang import Builder
 from kivy.uix.screenmanager import Screen, ScreenManager, NoTransition
+from kivy.core.audio import SoundLoader
 
 kivy.require("1.11.1")
 
@@ -11,6 +17,14 @@ original_dir = os.path.realpath(os.path.dirname(__file__))
 os.chdir(original_dir)
 
 Builder.load_file("main_menu.kv")
+
+
+# class ImageButton(ButtonBehavior, HoverBehavior, Image):
+#
+# 	def __init__(self, **kwargs):
+# 		super(ImageButton, self).__init__(**kwargs)
+#
+#
 
 
 class MainMenu(Screen):
@@ -24,8 +38,15 @@ sm.current = 'main_menu'
 
 
 class OpenCity12(App):
+	def __init__(self, **kwargs):
+		super(OpenCity12, self).__init__(**kwargs)
+		self.sound1 = SoundLoader.load("button_press.mp3")
+
 	def build(self):
 		return sm
+
+	def play_button_sound(self):
+		self.sound1.play()
 
 
 # class OpenCity1:

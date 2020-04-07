@@ -1,10 +1,11 @@
 #:import HoverBehavior opencity_kivy.hoverbehavior
-#:import App kivy.app.App
 #:import os os
 
 #:set original_dir os.path.realpath(os.path.dirname('main_menu.kv'))
 
 <ImageButton@ButtonBehavior+HoverBehavior+Image>
+    on_press:
+        app.play_button_sound()
 
 <MainMenu>:
 #    canvas.before:
