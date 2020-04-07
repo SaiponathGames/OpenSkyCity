@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="24d91d9c-ae43-413d-8923-872a888180d9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencity_kivy/main_menu.kv" beforeDir="false" afterPath="$PROJECT_DIR$/opencity_kivy/main_menu.kv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencity_kivy/main_menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencity_kivy/main_menu.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,8 +34,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -51,8 +52,8 @@
       <recent name="F:\PyCharm Python Works\OpenCity\" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.bot">
-    <configuration name="bot" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.main_menu">
+    <configuration name="exit_game_menu" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="OpenCity" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -60,14 +61,14 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/.." />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencity_kivy" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../bot.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencity_kivy/exit_game_menu.py" />
       <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
@@ -164,11 +165,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.bot" />
-        <item itemvalue="Python.bot" />
+        <item itemvalue="Python.main_menu" />
         <item itemvalue="Python.splashscreen" />
         <item itemvalue="Python.initialize (1)" />
         <item itemvalue="Python.port56" />
+        <item itemvalue="Python.exit_game_menu" />
       </list>
     </recent_temporary>
   </component>
@@ -194,9 +195,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1577280871006</updated>
-      <workItem from="1586060842332" duration="685000" />
-      <workItem from="1586062617505" duration="1658000" />
-      <workItem from="1586066203912" duration="1130000" />
+      <workItem from="1586253599907" duration="2093000" />
     </task>
     <task id="LOCAL-00001" summary="Added sound effect">
       <created>1584855659859</created>
@@ -261,26 +260,26 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1584786390898" />
-    <state width="1515" height="164" key="GridCell.Tab.0.bottom" timestamp="1585391520862">
+    <state width="1493" height="164" key="GridCell.Tab.0.bottom" timestamp="1586255701615">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1259" height="215" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1280.680@1920.0.1280.680" timestamp="1579840481022" />
-    <state width="1515" height="164" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585391520862" />
-    <state width="1515" height="164" key="GridCell.Tab.0.center" timestamp="1585391520861">
+    <state width="1493" height="164" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586255701615" />
+    <state width="1493" height="164" key="GridCell.Tab.0.center" timestamp="1586255701615">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1259" height="215" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1280.680@1920.0.1280.680" timestamp="1579840481022" />
-    <state width="1515" height="164" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1585391520861" />
-    <state width="1515" height="164" key="GridCell.Tab.0.left" timestamp="1585391520861">
+    <state width="1493" height="164" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1586255701615" />
+    <state width="1493" height="164" key="GridCell.Tab.0.left" timestamp="1586255701615">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1259" height="215" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1280.680@1920.0.1280.680" timestamp="1579840481022" />
-    <state width="1515" height="164" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1585391520861" />
-    <state width="1515" height="164" key="GridCell.Tab.0.right" timestamp="1585391520861">
+    <state width="1493" height="164" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1586255701615" />
+    <state width="1493" height="164" key="GridCell.Tab.0.right" timestamp="1586255701615">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1259" height="215" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1280.680@1920.0.1280.680" timestamp="1579840481022" />
-    <state width="1515" height="164" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1585391520861" />
+    <state width="1493" height="164" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1586255701615" />
     <state width="1515" height="261" key="GridCell.Tab.1.bottom" timestamp="1584952231031">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -297,10 +296,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1515" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1584952231031" />
-    <state x="277" y="56" key="SettingsEditor" timestamp="1585218741291">
+    <state x="147" y="65" key="MergeDialog" timestamp="1586253874853">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="277" y="56" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1585218741291" />
+    <state x="147" y="65" key="MergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1586253874853" />
+    <state x="480" y="128" key="MultipleFileMergeDialog" timestamp="1586253874873">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="480" y="128" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1586253874873" />
+    <state x="277" y="56" key="SettingsEditor" timestamp="1585116234617">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="277" y="56" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1585116234617" />
     <state width="775" height="419" key="XDebugger.FullValuePopup" timestamp="1579103346404">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -313,14 +320,6 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="341" y="149" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1580885226219" />
-    <state x="93" y="93" width="1350" height="638" maximized="true" key="dock-window-1" timestamp="1577529455918">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="93" y="93" width="1350" height="638" maximized="true" key="dock-window-1/0.0.1536.824@0.0.1536.824" timestamp="1577529455918" />
-    <state x="93" y="93" width="1350" height="638" key="dock-window-2" timestamp="1577529385693">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="93" y="93" width="1350" height="638" key="dock-window-2/0.0.1536.824@0.0.1536.824" timestamp="1577529385693" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1578720378790">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -336,5 +335,8 @@
         </breakpoint>
       </default-breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/OpenCity$main_menu.coverage" NAME="main_menu Coverage Results" MODIFIED="1586255701599" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/opencity_kivy" />
   </component>
 </project>
