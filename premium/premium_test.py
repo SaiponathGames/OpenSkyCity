@@ -3,15 +3,13 @@ def premium_test():
 	from cryptograph.file_encryptor import encrypt_file
 	from cryptograph.file_decryptor import decrypt_file
 	from file import file
-	from files.file_reader import file_reader
-	from dirs.dir_reader import dir_reader
+	import dirs
+	import files
 	original_path = os.path.realpath(os.path.dirname(__file__))
 	os.chdir(original_path)
 	os.chdir("..")
-	x, u = dir_reader('paths.txt')
-	y = file_reader('files.txt')
-	os.chdir(original_path)
-	os.chdir(original_path)
+	x, u = dirs.dirs_reader('paths.txt')
+	y = files.files_reader('files.txt')
 	os.chdir(x[0])
 	f2 = open(y[0], 'w')
 	os.chdir(original_path)
