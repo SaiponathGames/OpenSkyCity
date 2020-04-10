@@ -36,3 +36,7 @@ def special_sandbox_mode_test():
 	os.chdir('..')
 	encrypt_file(file_input, file_output)
 	os.chdir(original_path)
+
+
+if __name__ == '__main__':
+	special_sandbox_mode_test()

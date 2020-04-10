@@ -45,3 +45,7 @@ def premium_test():
 	f2.write(var0[0])
 	f2.close()
 	os.chdir(original_path)
+
+
+if __name__ == '__main__':
+	premium_test()

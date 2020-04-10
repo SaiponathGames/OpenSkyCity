@@ -37,3 +37,7 @@ def folder_and_file_creator():
 			file_checker.file_checker(y[4].format(mapname))
 		else:
 			break
+
+
+if __name__ == '__main__':
+	folder_and_file_creator()
