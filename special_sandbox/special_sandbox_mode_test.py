@@ -3,12 +3,12 @@ def special_sandbox_mode_test():
 	from cryptograph.file_encryptor import encrypt_file
 	from cryptograph.file_decryptor import decrypt_file
 	from file import file
-	from files.file_reader import file_reader
-	from dirs.dir_reader import dir_reader
+	import dirs
+	import files
 	original_path = os.path.realpath(os.path.dirname(__file__))
 	os.chdir("..")
-	x, u = dir_reader('paths.txt')
-	y = file_reader('files.txt')
+	x, u = dirs.dirs_reader('paths.txt')
+	y = files.files_reader('files.txt')
 	os.chdir(original_path)
 	f1 = open(y[2], 'r')
 	os.chdir(x[1])
@@ -36,3 +36,7 @@ def special_sandbox_mode_test():
 	os.chdir('..')
 	encrypt_file(file_input, file_output)
 	os.chdir(original_path)
+
+
+if __name__ == '__main__':
+	special_sandbox_mode_test()

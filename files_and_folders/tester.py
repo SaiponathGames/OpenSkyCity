@@ -8,19 +8,26 @@ f1 = open(x, 'r')
 var0 = []
 var2 = []
 var4 = []
-for data in f1:
-	var0.append(data)
+# for data in f1:
+# 	var0.append(data)
 home = os.path.expanduser('~')
 appdata = os.getenv('LOCALAPPDATA')
-for var1 in var0:
-	var3 = var1.strip("~\\/' \n")
-	if re.search('APPDATA', var1):
-		var5 = var3.strip('\\APPDATA\\')
-		vs = os.path.join(appdata, var5)
-		var4.append(vs)
+print(appdata)
+print(home)
+for dir1 in f1:
+	if 'APPDATA' in dir1:
+		# var3 = var1.strip()
+		# print(var3)
+		# print(re.findall('APPDATA', var1))
+		# var5 =
+		# print(var5)
+		# vs =
+		var4.append(os.path.join(appdata, dir1.strip("~\\/' \n").strip('\\APPDATA\\')))
 	else:
-		vs = os.path.join(home, var3)
-		var2.append(vs)
+		# var3 =
+		# print(var3)
+		# vs =
+		var2.append(os.path.join(home, dir1.strip("~\\/' \n")))
 print(var2)
 print(var4)
 

@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="24d91d9c-ae43-413d-8923-872a888180d9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/opencity_kivy/button_press_1.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tester/button_press.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tester/button_press_1.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tester/test6.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/premium/premium_users.usra" beforeDir="false" afterPath="$PROJECT_DIR$/premium/premium_users.usra" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/special_sandbox/special_sandbox_mode_users.usra" beforeDir="false" afterPath="$PROJECT_DIR$/special_sandbox/special_sandbox_mode_users.usra" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +30,6 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -52,29 +53,7 @@
       <recent name="F:\PyCharm Python Works\OpenCity\" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.initialize (1)">
-    <configuration name="exit_game_menu" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="OpenCity" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencity_kivy" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencity_kivy/exit_game_menu.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.test6">
     <configuration name="initialize (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="OpenCity" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -163,27 +142,37 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="test6" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="OpenCity" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tester" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tester/test6.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.test6" />
         <item itemvalue="Python.initialize (1)" />
         <item itemvalue="Python.main_menu" />
         <item itemvalue="Python.splashscreen" />
         <item itemvalue="Python.port56" />
-        <item itemvalue="Python.exit_game_menu" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -195,7 +184,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1577280871006</updated>
-      <workItem from="1586253599907" duration="3240000" />
     </task>
     <task id="LOCAL-00001" summary="Added sound effect">
       <created>1584855659859</created>
@@ -215,7 +203,7 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -260,7 +248,6 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1584786390898" />
-    <state width="1493" height="164" key="GridCell.Tab.0.bottom" timestamp="1586258429575">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1259" height="215" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1280.680@1920.0.1280.680" timestamp="1579840481022" />
@@ -279,7 +266,6 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1259" height="215" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1280.680@1920.0.1280.680" timestamp="1579840481022" />
-    <state width="1493" height="164" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1586258429575" />
     <state width="1515" height="261" key="GridCell.Tab.1.bottom" timestamp="1584952231031">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -300,10 +286,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="147" y="65" key="MergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1586253874853" />
-    <state x="480" y="128" key="MultipleFileMergeDialog" timestamp="1586253874873">
+    <state x="480" y="128" key="MultipleFileMergeDialog" timestamp="1586260002191">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="480" y="128" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1586253874873" />
+    <state x="480" y="128" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1586260002191" />
     <state x="277" y="56" key="SettingsEditor" timestamp="1585116234617">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -320,6 +306,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="341" y="149" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1580885226219" />
+    <state x="624" y="316" key="git4idea.rebase.GitUnstructuredEditor" timestamp="1586260019761">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="624" y="316" key="git4idea.rebase.GitUnstructuredEditor/0.0.1536.824@0.0.1536.824" timestamp="1586260019761" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1578720378790">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -337,7 +327,5 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/OpenCity$main_menu.coverage" NAME="main_menu Coverage Results" MODIFIED="1586255701599" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/opencity_kivy" />
-    <SUITE FILE_PATH="coverage/OpenCity$initialize__1_.coverage" NAME="initialize (1) Coverage Results" MODIFIED="1586258429559" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
