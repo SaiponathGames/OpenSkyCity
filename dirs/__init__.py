@@ -1,7 +1,7 @@
 import os
 
 
-def dirs_creator(dirs):
+def dirs_checker(dirs):
 	for dir_path in dirs:
 		dir_check = os.path.isdir(dir_path)
 		if dir_check is False:

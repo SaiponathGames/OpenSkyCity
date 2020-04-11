@@ -14,8 +14,8 @@ def folder_and_file_creator():
 		mapnames.append(cityname1)
 
 	home_dirs, appdata_dirs = dirs.dirs_reader('paths.txt')
-	dirs.dirs_creator(home_dirs)
-	dirs.dirs_creator(appdata_dirs)
+	dirs.dirs_checker(home_dirs)
+	dirs.dirs_checker(appdata_dirs)
 	file_list = files.files_reader('files.txt')
 	os.chdir(original_path)
 	os.chdir(home_dirs[0])
