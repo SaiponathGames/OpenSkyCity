@@ -18,14 +18,8 @@ def folder_and_file_creator():
 	dirs.dirs_checker(appdata_dirs)
 	file_list = files.files_reader('files.txt')
 	os.chdir(original_path)
-	os.chdir(home_dirs[0])
-	files.files_checker(file_list[0])
-	os.chdir(home_dirs[1])
-	files.files_checker(file_list[2])
-	os.chdir(appdata_dirs[0])
-	files.files_checker(file_list[1])
-	os.chdir(appdata_dirs[1])
-	files.files_checker(file_list[3])
+	app_dir_indices = [0, 1, 0, 1]
+	file_dir_indices = [0, 2, 1, 3]
 	os.chdir(home_dirs[8])
 	for i in range(10):
 		files.files_checker(file_list[5].format(i))
