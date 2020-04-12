@@ -7,5 +7,6 @@
     <orderEntry type="jdk" jdkName="Python 3.8 (OpenCity)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="Kivy Test" />
+    <orderEntry type="module" module-name="Project Test" />
   </component>
 </module>
