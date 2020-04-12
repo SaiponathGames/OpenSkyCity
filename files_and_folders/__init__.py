@@ -5,14 +5,12 @@ import dirs
 
 
 def switch_dirs(app_dir_indices, file_dir_indices, appdata_dirs, home_dirs, file_list):
-	app_dir_index_1 = 0
-	for app_dir_index, file_dir_index in zip(app_dir_indices, file_dir_indices):
+	for (app_dir_index_1, app_dir_index), file_dir_index in zip(enumerate(app_dir_indices), file_dir_indices):
 		if app_dir_index_1 >= 2:
 			os.chdir(appdata_dirs[app_dir_index])
 		else:
 			os.chdir(home_dirs[app_dir_index])
 		files.files_checker(file_list[file_dir_index])
-		app_dir_index_1 += 1
 
 
 def folder_and_file_creator():
