@@ -1,10 +1,12 @@
+import os
+from cryptograph.file_encryptor import encrypt_file
+from cryptograph.file_decryptor import decrypt_file
+from file import file
+import dirs
+import files
+
+
 def premium_test():
-	import os
-	from cryptograph.file_encryptor import encrypt_file
-	from cryptograph.file_decryptor import decrypt_file
-	from file import file
-	import dirs
-	import files
 	original_path = os.path.realpath(os.path.dirname(__file__))
 	os.chdir(original_path)
 	os.chdir("..")
