@@ -2,9 +2,12 @@
   <dictionary name="kanna">
     <words>
       <w>abcdef</w>
+      <w>abmyii</w>
       <w>anim</w>
       <w>appdata</w>
+      <w>argtypes</w>
       <w>cityname</w>
+      <w>conout</w>
       <w>cryptograph</w>
       <w>dccdc</w>
       <w>fullscreen</w>
@@ -20,6 +23,7 @@
       <w>sairam</w>
       <w>ssssm</w>
       <w>stri</w>
+      <w>useremail</w>
       <w>userid</w>
       <w>usernames</w>
       <w>usertype</w>
