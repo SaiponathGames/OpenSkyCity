@@ -1,3 +1,0 @@
-'~\OpenCity\Premium\'
-'~\OpenCity\Plugins\'
-'~\OpenCity\Special_Sandbox_Mode\'
