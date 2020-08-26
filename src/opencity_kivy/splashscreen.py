@@ -38,8 +38,7 @@ class ScreenOne(Screen):
 		self.add_widget(box_layout)
 		box_layout.add_widget(self.img)
 
-	def on_new_anim_complete(self, *args):
-		do_nothing(self, *args)
+	def on_new_anim_complete(self, *args):  # noqa
 		change_screen_to('screen_two')
 
 	def on_enter(self):
@@ -68,16 +67,15 @@ class ScreenTwo(Screen):
 		float_layout.add_widget(self.img2)
 		float_layout.add_widget(self.img3)
 
-	def on_anim2_complete(self, *dt):
-		do_nothing(dt)
+	def on_anim2_complete(self, *dt):  # noqa
+		# do_nothing(dt)
 		if audio_playback:
 			self.label1.text = ""
 			change_screen_to('screen_three')
 		if not audio_playback:
 			change_screen_to('kivy_splash')
 
-	def on_anim1_start(self, *args):
-		do_nothing(*args)
+	def on_anim1_start(self, *args):  # noqa
 		if audio_playback:
 			self.label1.text = "Just a place holder audio"
 			sound1 = SoundLoader.load(os.path.join(original_dir, "OpenCity1.mp3"))
@@ -118,8 +116,8 @@ class ScreenThree(Screen):
 		# self.label2.opacity = 0
 		self.video1.volume = 1
 
-	def on_video1_eos(self, *dt):
-		do_nothing(dt, self)
+	def on_video1_eos(self, *dt):  # noqa
+		# do_nothing(dt, self)
 		global audio_playback
 		# print(self.video1.loaded)
 		# Clock.schedule_once(self.video1_play)
@@ -141,8 +139,8 @@ class ScreenThree(Screen):
 	#         self.video1.play = True
 	#     do_nothing(dt, self.video1.loaded)
 
-	def _adjust_opacity(self, *dt):
-		do_nothing(dt)
+	def _adjust_opacity(self, *dt):  # noqa
+		# do_nothing(dt)
 		self.video1.opacity = 1
 
 
@@ -192,8 +190,8 @@ sm.add_widget(ExitGameScreen(name="exit_game_screen"))
 sm.current = "screen_one"
 
 
-def change_screen_to(screen, *args):
-	do_nothing(*args)
+def change_screen_to(screen, *args):  # noqa
+	# do_nothing(*args)
 	sm.current = screen
 
 
@@ -217,7 +215,6 @@ class OpenCityApp(App):
 		self.sound1.play()
 
 
-#
 if __name__ == "__main__":
 	OpenCityApp().run()
 	# source = os.path.join(current_dir, "opencityicon.png")

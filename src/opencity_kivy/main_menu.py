@@ -1,12 +1,11 @@
-import kivy
 import os
-from kivy.app import App
+
+import kivy
 from kivy.config import Config
 
 Config.set("kivy", "log_level", "debug")
 from kivy.lang import Builder
-from kivy.uix.screenmanager import Screen, ScreenManager, NoTransition
-from kivy.core.audio import SoundLoader
+from kivy.uix.screenmanager import Screen
 
 kivy.require("1.11.1")
 
@@ -25,8 +24,7 @@ Builder.load_file("main_menu.kv")
 
 
 class MainMenu(Screen):
-	pass
-
+    pass
 
 # sm = ScreenManager(transition=NoTransition())
 # sm.add_widget(MainMenu(name='main_menu'))
@@ -53,6 +51,6 @@ class MainMenu(Screen):
 #         print(self.x1)
 
 #
-if __name__ == '__main__':
-	# OpenCity1()
-	OpenCity12().run()
+# if __name__ == '__main__':
+# 	# OpenCity1()
+# 	OpenCity12().run()
