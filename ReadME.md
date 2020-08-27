@@ -13,9 +13,9 @@ Hello everyone, I am Sairam, the developer of OpenCity, A city simulation game, 
 2. Get Python 3.8.2+ from https://www.python.org/downloads/release/python-382/
 3. Get Kivy 2.0.0rc3+ from https://kivy.org/doc/stable/installation/installation-windows.html and https://github.com/kivy/kivy/issues/6563#issuecomment-565831512.
 4. Install `python -m pip install docutils pygments pypiwin32 kivy_deps.sdl2==0.1.* kivy_deps.glew==0.1.* kivy_deps.gstreamer==0.1.* kivy_deps.angle==0.1.*`  
-5. Install the dependencies from dependencies.txt before running initialize.py
-6. Run initialize.py It would take sometime to load for the first time. Please wait till then. If it <b> crashes </b>, try again for 1 to 3 times, it'll work. 
-7. For testing the game if the game works correctly. Check your users folder and Appdata/Local folders.
+5. Install the dependencies from dependencies.txt before running main.py
+6. Run main.py It would take sometime to load for the first time. Please wait till then. If it <b> crashes </b>, try again for 1 to 3 times, it'll work. 
+7. For testing the game if the game works correctly. Check your users folder and Appdata/Local folders. (For now I have removed that)
 There will some folders like plugins, special_sandbox, premium. If you find them, then the game is working properly.
 _____________________________________________________________________________________________________________________________________________________________________________________________________________
 
