@@ -21,7 +21,7 @@ from kivy.properties import StringProperty
 original_dir = os.path.realpath(os.path.dirname(__file__))
 os.chdir(original_dir)
 
-print(original_dir)
+# print(original_dir)
 audio_playback = True
 
 
@@ -107,8 +107,8 @@ class ScreenThree(Screen):
 		float_layout.add_widget(self.video1, index=1)
 		self.video1.opacity = 0
 
-	def video1_play(self, *dt):
-		do_nothing(dt)
+	def video1_play(self, *dt):  # noqa
+		# do_nothing(dt)
 		self.video1.state = "play"
 		# self.event1 = Clock.schedule_interval(partial(print, self.video1.loaded), 0.5)
 		self.label1.opacity = 1
@@ -133,11 +133,6 @@ class ScreenThree(Screen):
 		# self.label2.opacity = 1
 		Clock.schedule_once(self._adjust_opacity, 1)
 		# self.event1 = Clock.schedule_interval(self._check_loaded, 0.5)
-
-	# def _check_loaded(self, *dt):
-	#     if self.video1.loaded:
-	#         self.video1.play = True
-	#     do_nothing(dt, self.video1.loaded)
 
 	def _adjust_opacity(self, *dt):  # noqa
 		# do_nothing(dt)
@@ -204,11 +199,9 @@ def change_screen_to(screen, *args):  # noqa
 class OpenCityApp(App):
 	icon = StringProperty(os.path.join(original_dir, "OpenCity_Icon.png"))
 
-	def __init__(self, **kwargs):
-		super(OpenCityApp, self).__init__(**kwargs)
-		self.sound1 = SoundLoader.load(os.path.join(original_dir, "button_press.mp3"))
-
 	def build(self):
+		self.sound1 = SoundLoader.load(os.path.join(original_dir, "button_press.mp3"))  # noqa
+
 		return sm
 
 	def play_button_sound(self):
