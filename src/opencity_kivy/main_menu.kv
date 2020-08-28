@@ -4,6 +4,12 @@
 #:set original_dir os.path.realpath(os.path.dirname('main_menu.kv'))
 
 <ImageButton@ButtonBehavior+HoverBehavior+Image>
+    canvas.before:
+        Color:
+            rgba: 1, 0, 0, 0.5
+        Rectangle:
+            size: self.size
+            pos: self.pos
     on_press:
         app.play_button_sound()
 

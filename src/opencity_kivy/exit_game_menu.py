@@ -1,8 +1,8 @@
 import os
-from kivy.app import App
+
 from kivy.lang import Builder
-from kivy.config import Config
-from kivy.uix.screenmanager import Screen, ScreenManager
+from kivy.uix.screenmanager import Screen
+from opencity_kivy.hoverbehavior import HoverBehavior  # noqa
 
 original_dir = os.path.realpath(os.path.dirname(__file__))
 os.chdir(original_dir)
@@ -11,8 +11,7 @@ Builder.load_file("exit_game_menu.kv")
 
 
 class ExitGameScreen(Screen):
-	pass
-
+    pass
 
 # sm = ScreenManager()
 # sm.add_widget(ExitGameScreen(name="exit_game"))

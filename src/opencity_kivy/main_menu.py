@@ -1,11 +1,10 @@
 import os
 
 import kivy
-from kivy.config import Config
-
-Config.set("kivy", "log_level", "debug")
+# Config.set("kivy", "log_level", "debug")
 from kivy.lang import Builder
 from kivy.uix.screenmanager import Screen
+from opencity_kivy.hoverbehavior import HoverBehavior  # noqa
 
 kivy.require("1.11.1")
 

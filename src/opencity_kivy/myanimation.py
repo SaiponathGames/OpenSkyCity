@@ -66,4 +66,3 @@ class MyAnimation(Animation):
 
     def __and__(self, animation):
         return MyParallel(self, animation)
-

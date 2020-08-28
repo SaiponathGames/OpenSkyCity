@@ -82,6 +82,17 @@ python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 version = "0.29.15"
 
 [[package]]
+category = "main"
+description = "A Discord Rich Presence library for Python 2 & 3"
+name = "discord-rpc.py"
+optional = false
+python-versions = "*"
+version = "1.3.0"
+
+[package.dependencies]
+requests = "*"
+
+[[package]]
 category = "dev"
 description = "Distribution utilities"
 name = "distlib"
@@ -148,7 +159,7 @@ marker = "sys_platform == \"win32\""
 name = "kivy-deps.angle"
 optional = false
 python-versions = "*"
-version = "0.1.10"
+version = "0.2.0"
 
 [[package]]
 category = "main"
@@ -157,7 +168,7 @@ marker = "sys_platform == \"win32\""
 name = "kivy-deps.glew"
 optional = false
 python-versions = "*"
-version = "0.1.12"
+version = "0.2.0"
 
 [[package]]
 category = "main"
@@ -166,7 +177,7 @@ marker = "sys_platform == \"win32\""
 name = "kivy-deps.gstreamer"
 optional = false
 python-versions = "*"
-version = "0.1.18"
+version = "0.2.0"
 
 [[package]]
 category = "main"
@@ -175,7 +186,7 @@ marker = "sys_platform == \"win32\""
 name = "kivy-deps.sdl2"
 optional = false
 python-versions = "*"
-version = "0.1.23"
+version = "0.2.0"
 
 [[package]]
 category = "main"
@@ -377,7 +388,7 @@ docs = ["proselint (>=0.10.2)", "sphinx (>=3)", "sphinx-argparse (>=0.2.5)", "sp
 testing = ["coverage (>=5)", "coverage-enable-subprocess (>=1)", "flaky (>=3)", "pytest (>=4)", "pytest-env (>=0.6.2)", "pytest-freezegun (>=0.4.1)", "pytest-mock (>=2)", "pytest-randomly (>=1)", "pytest-timeout (>=1)", "pytest-xdist (>=1.31.0)", "packaging (>=20.0)", "xonsh (>=0.9.16)"]
 
 [metadata]
-content-hash = "202b74a29f79cf1d4707209f01ae53b3cb88e667740b2837f2054b004f052dc8"
+content-hash = "ea40f1d06ec995795bb79fa005fd3c5c542982094d231d8d7bb451a774c7faf3"
 lock-version = "1.0"
 python-versions = "^3.8"
 
@@ -490,6 +501,11 @@ cython = [
     {file = "Cython-0.29.15-py2.py3-none-any.whl", hash = "sha256:7ea18a5c87cacdd6e4feacf8badf13643775b6f69c3aa8b50417834b9ce0e627"},
     {file = "Cython-0.29.15.tar.gz", hash = "sha256:60d859e1efa5cc80436d58aecd3718ff2e74b987db0518376046adedba97ac30"},
 ]
+"discord-rpc.py" = [
+    {file = "discord-rpc.py-1.3.0.tar.gz", hash = "sha256:2301ffb59f7964e31fbac3c2fc35944532c452d6b6d806b2a0b30f422a8a6679"},
+    {file = "discord_rpc.py-1.3.0-py2-none-any.whl", hash = "sha256:9017a5884c536aa4cf7dde574ec75dad162caae5b68a219f9375417653ffb063"},
+    {file = "discord_rpc.py-1.3.0-py3-none-any.whl", hash = "sha256:289c3d77893c0d74acad872eb87a51a6492e20c052553525edf78963fb31bf3d"},
+]
 distlib = [
     {file = "distlib-0.3.1-py2.py3-none-any.whl", hash = "sha256:8c09de2c67b3e7deef7184574fc060ab8a793e7adbb183d942c389c8b13c52fb"},
     {file = "distlib-0.3.1.zip", hash = "sha256:edf6116872c863e1aa9d5bb7cb5e05a022c519a4594dc703843343a9ddd9bff1"},
@@ -524,46 +540,36 @@ kivy = [
     {file = "Kivy-2.0.0rc3.tar.gz", hash = "sha256:d16770fdacf1c9e032ee1a3f50151f88bd4f94ffd12a7d0b037b0beb4683bfc5"},
 ]
 "kivy-deps.angle" = [
-    {file = "kivy_deps.angle-0.1.10-cp35-cp35m-win32.whl", hash = "sha256:5f2feffe5a608467a92acb40ae55bd0d22bd9148f69f9fe483bdfac04833f779"},
-    {file = "kivy_deps.angle-0.1.10-cp35-cp35m-win_amd64.whl", hash = "sha256:960345cc9d04ce9753832ae70277dea4f9915518a25e5e9a87f8c45d96be3189"},
-    {file = "kivy_deps.angle-0.1.10-cp36-cp36m-win32.whl", hash = "sha256:4b290b7d4abe635e4becafb1cb82d5cc6e39b0dcb57ade2ad0355bd00f2025a3"},
-    {file = "kivy_deps.angle-0.1.10-cp36-cp36m-win_amd64.whl", hash = "sha256:04070b15c7739bda6e4d6fd168c8c13601f7b399be67c0d149c6caa95d67b983"},
-    {file = "kivy_deps.angle-0.1.10-cp37-cp37m-win32.whl", hash = "sha256:7820c09635efd04f0209ee124c18789849e0d5c7e7fbbdd5531c77e72576c14f"},
-    {file = "kivy_deps.angle-0.1.10-cp37-cp37m-win_amd64.whl", hash = "sha256:59d6b482c34acf7be20dc7faa10956ba2fe72ae431cf284f59a0fd585270d103"},
-    {file = "kivy_deps.angle-0.1.10-cp38-cp38-win32.whl", hash = "sha256:5ffde649916b8c044211fbdf70328dc5ec804f5995cf8d2e300a5bd82eede80e"},
-    {file = "kivy_deps.angle-0.1.10-cp38-cp38-win_amd64.whl", hash = "sha256:1b576b9250424cc130815c204a6edbc27b6b72749162164231cfa1fd7e849ebb"},
+    {file = "kivy_deps.angle-0.2.0-cp36-cp36m-win32.whl", hash = "sha256:22d6c080ead925625d94614e73e6e29f4974a5ffa3cb14ea98383d699bcbb18d"},
+    {file = "kivy_deps.angle-0.2.0-cp36-cp36m-win_amd64.whl", hash = "sha256:6321a8504823d71da1493c03c4188963c13840562eccf17382b57d0c1ec8e80b"},
+    {file = "kivy_deps.angle-0.2.0-cp37-cp37m-win32.whl", hash = "sha256:9416258c80fa1507acdb5eb93591a6bbf467e0dec86f8b66e9a156aa76080f94"},
+    {file = "kivy_deps.angle-0.2.0-cp37-cp37m-win_amd64.whl", hash = "sha256:5736da2eaadd9061a7921944126a8c8ad95fe8420ea96b1e4770b0b7a67af88e"},
+    {file = "kivy_deps.angle-0.2.0-cp38-cp38-win32.whl", hash = "sha256:0c86f9e94d886deb11e87dc37dc774a867360c584eac566b427c6140c89c3274"},
+    {file = "kivy_deps.angle-0.2.0-cp38-cp38-win_amd64.whl", hash = "sha256:2e9317b6a380bc5adf91644f41d90ba9fc6f3f525f05c555670c1c1edb819d1b"},
 ]
 "kivy-deps.glew" = [
-    {file = "kivy_deps.glew-0.1.12-cp27-cp27m-win32.whl", hash = "sha256:92e72fa2c425887987d1aa861c99537033dc20d68ae1c54864871f0401682586"},
-    {file = "kivy_deps.glew-0.1.12-cp27-cp27m-win_amd64.whl", hash = "sha256:c843104690c0c8f3a58105c53c57f31506f6f90562c18de00bd19317cc1045a7"},
-    {file = "kivy_deps.glew-0.1.12-cp35-cp35m-win32.whl", hash = "sha256:ee8ab67abb2c98d84feede657cae472e7723e529af07394244bdd33caafb1a38"},
-    {file = "kivy_deps.glew-0.1.12-cp35-cp35m-win_amd64.whl", hash = "sha256:ab81783a82bef88a8d2bcf8a93bc21df6b8b0db6ee551eb802727d18f9074b17"},
-    {file = "kivy_deps.glew-0.1.12-cp36-cp36m-win32.whl", hash = "sha256:45aa7f0e8d9bcf5fc1810c9c38bc20edf7dee61df81ecf62102e0f84153f924a"},
-    {file = "kivy_deps.glew-0.1.12-cp36-cp36m-win_amd64.whl", hash = "sha256:ef1116d99bd9cc737cb8c0e13e676955c17d6e4d6d1af5cfccef089a430071bb"},
-    {file = "kivy_deps.glew-0.1.12-cp37-cp37m-win32.whl", hash = "sha256:1e28e40017af9d081fc0fc95b4fadaf31d15e9f63478dcee1c4257d67079894e"},
-    {file = "kivy_deps.glew-0.1.12-cp37-cp37m-win_amd64.whl", hash = "sha256:6bb435620c3187d2c61054adb9ec277ed487256b457a0a7b1491bc0cb7247e18"},
-    {file = "kivy_deps.glew-0.1.12-cp38-cp38-win32.whl", hash = "sha256:09f72ee5ef33ff273332e2a229dc97d650d29818a0189339421949e4e0f63d93"},
-    {file = "kivy_deps.glew-0.1.12-cp38-cp38-win_amd64.whl", hash = "sha256:cf351aad171796f8051af8e49ec430a9aa128d8557d8643e73f2bb1e5f9c2dab"},
+    {file = "kivy_deps.glew-0.2.0-cp36-cp36m-win32.whl", hash = "sha256:285c50d706ae94090f96724cc72b47cf89dfdf249057405c2260991caaeb0d64"},
+    {file = "kivy_deps.glew-0.2.0-cp36-cp36m-win_amd64.whl", hash = "sha256:5012c02bce7fa8e59c053b92acb3ea01e0db5790a617fb5985e67cf8a6be28b8"},
+    {file = "kivy_deps.glew-0.2.0-cp37-cp37m-win32.whl", hash = "sha256:a6f3230927c776a490bc5c0675265d9fe59a8afde2e7f1f5bb0a6a4c05a49738"},
+    {file = "kivy_deps.glew-0.2.0-cp37-cp37m-win_amd64.whl", hash = "sha256:738a222f16b032b5ccd4c686fc51e678d95e4c1f13c57f32233d3cb8aa2f34bf"},
+    {file = "kivy_deps.glew-0.2.0-cp38-cp38-win32.whl", hash = "sha256:39bc81b68aa9c3c051472624d5e9cf57e5b8cedcafc3f4d2edc5b26708742a9e"},
+    {file = "kivy_deps.glew-0.2.0-cp38-cp38-win_amd64.whl", hash = "sha256:7fdfa95e3fe6fbcb7efc3e1d32680856a6e72c6399bc5dd76c2e7609b2e9bf58"},
 ]
 "kivy-deps.gstreamer" = [
-    {file = "kivy_deps.gstreamer-0.1.18-cp35-cp35m-win32.whl", hash = "sha256:47be761f8199bfd42976ad1eae468ba048a6d39df75c997493886bccb8b8792b"},
-    {file = "kivy_deps.gstreamer-0.1.18-cp35-cp35m-win_amd64.whl", hash = "sha256:08688a924925dfe28d9fe573c569c74411a5b4796b7a50578721955567e45d93"},
-    {file = "kivy_deps.gstreamer-0.1.18-cp36-cp36m-win32.whl", hash = "sha256:dc83b86c5c92dd0e93f012f46865a2d5953396b4de872114aeabbefd10dd74ee"},
-    {file = "kivy_deps.gstreamer-0.1.18-cp36-cp36m-win_amd64.whl", hash = "sha256:e65a0b8d0f34cef678201c5f7f012a00915f5a179ec28598dcf00836395620fb"},
-    {file = "kivy_deps.gstreamer-0.1.18-cp37-cp37m-win32.whl", hash = "sha256:fdfdb239ee85a346d252bede50f748ae974652a412a36ac8f64d473cde300941"},
-    {file = "kivy_deps.gstreamer-0.1.18-cp37-cp37m-win_amd64.whl", hash = "sha256:4eb738e94921f6c22254fbbcecebaea2ab581b9bf0e904f30e3bd3df722208b7"},
-    {file = "kivy_deps.gstreamer-0.1.18-cp38-cp38-win32.whl", hash = "sha256:162e1e00914ba7f8412dcfb0955215b1f0f22e5f0672c34d4e827cc1b830e165"},
-    {file = "kivy_deps.gstreamer-0.1.18-cp38-cp38-win_amd64.whl", hash = "sha256:b29376d0710d623ed41c3500f7f4c5a86da03918384eeda368ab90964ceb010e"},
+    {file = "kivy_deps.gstreamer-0.2.0-cp36-cp36m-win32.whl", hash = "sha256:9f3171d5353eacbe96bb3e480dda1bdc7f293ad971bdf668d3a93c516a327145"},
+    {file = "kivy_deps.gstreamer-0.2.0-cp36-cp36m-win_amd64.whl", hash = "sha256:157d3c3d23876139f7cf839150ca5847b254f690a6e685e1e8535e12ccc553ff"},
+    {file = "kivy_deps.gstreamer-0.2.0-cp37-cp37m-win32.whl", hash = "sha256:7f0b6bf44a458a9a27af87ef8a2da2906c053f97c9890cb6a5a61e4530438520"},
+    {file = "kivy_deps.gstreamer-0.2.0-cp37-cp37m-win_amd64.whl", hash = "sha256:c35175fecc9b666d77660d825802508d870619e4a47a1db880de888db6e15883"},
+    {file = "kivy_deps.gstreamer-0.2.0-cp38-cp38-win32.whl", hash = "sha256:394e6b54f4c4bab4a9138b6c3d5fdee02a9837cdec48218340904e5cfb425219"},
+    {file = "kivy_deps.gstreamer-0.2.0-cp38-cp38-win_amd64.whl", hash = "sha256:39cb2b5fe980c0cc814074f33d1e26eccad877c3524fa3e65274d2a090c96f17"},
 ]
 "kivy-deps.sdl2" = [
-    {file = "kivy_deps.sdl2-0.1.23-cp35-cp35m-win32.whl", hash = "sha256:879db11eb3999b4682a6f2458a8741a99dfd6b977266e4333f539084d08f4bd9"},
-    {file = "kivy_deps.sdl2-0.1.23-cp35-cp35m-win_amd64.whl", hash = "sha256:3473d59b9a02f942432a04664bf2e8170e755056b5e1279dc7471723145c6649"},
-    {file = "kivy_deps.sdl2-0.1.23-cp36-cp36m-win32.whl", hash = "sha256:da37157b6aaf658053445519d63bd586aceb0d256183481961e33d7eee4697eb"},
-    {file = "kivy_deps.sdl2-0.1.23-cp36-cp36m-win_amd64.whl", hash = "sha256:4deb64ce22ad480d0802483841a81562f5c5df101b268b0dde7bf85518cf38fd"},
-    {file = "kivy_deps.sdl2-0.1.23-cp37-cp37m-win32.whl", hash = "sha256:2ddad419c6fdc040b78a654218dbffeb61e83b860607e7feaf3e40c00c3e253b"},
-    {file = "kivy_deps.sdl2-0.1.23-cp37-cp37m-win_amd64.whl", hash = "sha256:279cba34c8084e81908a5339c35420a20cac68f21b136caa110661c60054042b"},
-    {file = "kivy_deps.sdl2-0.1.23-cp38-cp38-win32.whl", hash = "sha256:8c0d381f01e5336a9dcd0bfe33b5a4be69464b69248b57e44740b3f365bc13e6"},
-    {file = "kivy_deps.sdl2-0.1.23-cp38-cp38-win_amd64.whl", hash = "sha256:26fc22b3b81108b3884a0ab6f16b02e994f0b988d1741198872f94e701656f13"},
+    {file = "kivy_deps.sdl2-0.2.0-cp36-cp36m-win32.whl", hash = "sha256:f6c5fff4c1ebb75144e700cfae9fa79ad3b752a14761efe6996031b67d845298"},
+    {file = "kivy_deps.sdl2-0.2.0-cp36-cp36m-win_amd64.whl", hash = "sha256:b7e2648e85a43eb25ea61a4cdc9304a3855a8d36d76939b6968efeb81e853b83"},
+    {file = "kivy_deps.sdl2-0.2.0-cp37-cp37m-win32.whl", hash = "sha256:86671b769dddf8e7b1ad82773a01a724ff62742bffe4fa8f238d87b4d5f2a0b6"},
+    {file = "kivy_deps.sdl2-0.2.0-cp37-cp37m-win_amd64.whl", hash = "sha256:c2e1721aac0709f21835c8dd4aec5adea2d58e5df92005585f94d13bed2a2e06"},
+    {file = "kivy_deps.sdl2-0.2.0-cp38-cp38-win32.whl", hash = "sha256:182ba8686ba7d589d394c3fe07aba7d7187dc17846c118c27ce05aa6a3e9e7cb"},
+    {file = "kivy_deps.sdl2-0.2.0-cp38-cp38-win_amd64.whl", hash = "sha256:34f193da774535c7b1f377d5bf220751491eb479f4b0e2cf4b068419295473cc"},
 ]
 kivy-garden = [
     {file = "Kivy Garden-0.1.4.tar.gz", hash = "sha256:9b7d9de5efacbcd0c4b3dd873b30622a86093c9965aa47b523c7a32f3eb34610"},
