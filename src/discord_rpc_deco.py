@@ -7,7 +7,6 @@ import discord_rpc
 
 @contextlib.contextmanager
 def with_discord_rich_presence(opencity, state):
-    print('test')
 
     def _with_discord_rich_presence():
         def readyCallback(current_user):
@@ -29,12 +28,9 @@ def with_discord_rich_presence(opencity, state):
             'disconnected': disconnectedCallback,
             'error': errorCallback,
         }
-        print('initing')
         discord_rpc.initialize('651420362940088336', callbacks=callbacks, log=True)
         start = time.time()
-        print('moving to while loop')
-        print('in while loop')
-        while True:
+        while not opencity.is_app_stopped:
             discord_rpc.update_presence(
                 **{
                     'state': state,
@@ -46,7 +42,6 @@ def with_discord_rich_presence(opencity, state):
                     'small_image_text': 'Made by SPAR Interactive'
                 }
             )
-
             discord_rpc.update_connection()
             time.sleep(5)
             discord_rpc.run_callbacks()

@@ -74,6 +74,7 @@ if __name__ == '__main__':
 
 
 	Builder.load_string('''
+# kv_start
 <HoverLabel>:
 	text: "inside" if self.hovered else "outside"
 	pos: 200,200
@@ -85,6 +86,7 @@ if __name__ == '__main__':
 		Rectangle:
 			size: self.size
 			pos: self.pos
+# kv_end
 	''')
 	fl = FloatLayout()
 	fl.add_widget(HoverLabel())

@@ -2,7 +2,9 @@ import os
 
 import kivy
 # Config.set("kivy", "log_level", "debug")
+from kivy.app import App
 from kivy.lang import Builder
+from kivy.core.audio.audio_sdl2 import MusicSDL2  # noqa
 from kivy.uix.screenmanager import Screen
 from opencity_kivy.hoverbehavior import HoverBehavior  # noqa
 
@@ -23,7 +25,24 @@ Builder.load_file("main_menu.kv")
 
 
 class MainMenu(Screen):
-    pass
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.background_music_playing = False
+    def play_background_music(self):  # noqa
+        if not self.background_music_playing:
+            self.background_music = MusicSDL2(source="c_fast.wav")  # noqa
+            self.background_music.load()
+            self.background_music.bind(on_stop=self.on_background_music_stop)
+            self.background_music.play()
+            self.background_music_playing = True  # noqa
+        # self.background_music_playing = False  # noqa
+
+    def on_background_music_stop(self, *args):  # noqa
+        if App.get_running_app().sm.current not in ("main_menu", "exit_game_menu"):
+            if self.background_music_playing:
+                self.background_music.stop()
+        else:
+            self.background_music.play()
 
 # sm = ScreenManager(transition=NoTransition())
 # sm.add_widget(MainMenu(name='main_menu'))

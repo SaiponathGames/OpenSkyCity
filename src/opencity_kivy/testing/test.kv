@@ -1,0 +1,13 @@
+#:import Animation kivy.animation.Animation
+#:import Factory kivy.factory.Factory
+
+<ScreenOne>:
+    BoxLayout:
+        Label:
+            id: lb1
+            text: "Some testing!"
+            opacity: 0
+    on_enter:
+        Factory.Animation(d=3, opacity=1).start(lb1)
+
+#        anim_1.start(lb1)

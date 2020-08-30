@@ -4,7 +4,7 @@
 #:set original_dir os.path.realpath(os.path.dirname('main_menu.kv'))
 
 <ImageButton@ButtonBehavior+HoverBehavior+Image>
-    canvas.before:
+    canvas.after:
         Color:
             rgba: 1, 0, 0, 0.5
         Rectangle:
@@ -14,6 +14,10 @@
         app.play_button_sound()
 
 <MainMenu>:
+    on_enter:
+        root.play_background_music()
+    on_leave:
+        root.background_music_playing = False
 #    canvas.before:
 #        Rectangle:
 #            source: "opencityicon (1).png"

@@ -8,7 +8,7 @@ from kivy.config import Config
 from opencity_kivy.myanimation import MyAnimation
 
 Config.set('graphics', 'fullscreen', 'auto')
-from kivy.core.audio import SoundLoader
+from kivy.core.audio.audio_sdl2 import MusicSDL2, SoundSDL2  # noqa
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.image import Image
@@ -79,7 +79,8 @@ class ScreenTwo(Screen):
     def on_anim1_start(self, *args):  # noqa
         if audio_playback:
             self.label1.text = "Just a place holder audio"
-            sound1 = SoundLoader.load(os.path.join(original_dir, "OpenCity1.mp3"))
+            sound1 = MusicSDL2(source=os.path.join(original_dir, "OpenCity1.mp3"))
+            sound1.load()
             sound1.play()
 
     def on_enter(self):
@@ -178,27 +179,31 @@ class KivySplash(Screen):
             change_screen_to(App.get_running_app(), "main_menu")
 
 
-# class SplashScreen(Screen):
-#     def __init__(self, **kwargs):
-#         super().__init__(**kwargs)
-#         self.screen_manager = ScreenManager(transition=NoTransition())
-#         self.screen_manager.add_widget(ScreenOne(name="screen_one"))
-#         self.screen_manager.add_widget(ScreenTwo(name="screen_two"))
-#         self.screen_manager.add_widget(ScreenThree(name="screen_three"))
-#         self.screen_manager.add_widget(KivySplash(name="kivy_splash"))
+class SplashScreen(Screen):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.screen_manager = ScreenManager(transition=NoTransition())
+        self.screen_manager.add_widget(ScreenOne(name="screen_one"))
+        self.screen_manager.add_widget(ScreenTwo(name="screen_two"))
+        self.screen_manager.add_widget(ScreenThree(name="screen_three"))
+        self.screen_manager.add_widget(KivySplash(name="kivy_splash"))
 
-# Clock.schedule_once(partial(change_screen_to, 'screen_two'), 18)
-# Clock.schedule_once(partial(change_screen_to, 'screen_three'), 36)
-# Clock.schedule_once(App.stop, 32)
-# Clock.schedule_once(Window.close, 32)
+    def on_enter(self, *args):  # noqa
+        App.get_running_app().sm.current = "screen_one"
 
 
 class OpenCityApp(App):
     icon = StringProperty(os.path.join(original_dir, "OpenCity_Icon.png"))
 
+    is_app_stopped = False
+
+    def on_stop(self):
+        self.is_app_stopped = True
+
     def build(self):
-        self.sound1 = SoundLoader.load(os.path.join(original_dir, "button_press.mp3"))  # noqa
-        self.sm = ScreenManager(transition=NoTransition())  # noqa
+        self.sound1 = SoundSDL2(source=os.path.join(original_dir, "button_press.mp3"))  # noqa # same given below.
+        self.sound1.load()
+        self.sm = ScreenManager(transition=NoTransition())  # noqa # noqa for attribute not in __init__.
         self.sm.add_widget(ScreenOne(name="screen_one"))
         self.sm.add_widget(ScreenTwo(name="screen_two"))
         self.sm.add_widget(ScreenThree(name="screen_three"))
