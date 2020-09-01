@@ -1,6 +1,6 @@
-import file
-from cryptograph.file_decryptor import decrypt_file
-from cryptograph.file_encryptor import encrypt_file
+from src import settings, file
+from src.cryptograph import decrypt_file
+from src.cryptograph import encrypt_file
 
 
 def premium_test():
@@ -42,7 +42,7 @@ def premium_test():
     # f2.write(var0[0])
     # f2.close()
     # os.chdir(original_path)
-    import settings
+    # import settings
     file.file_copy(settings.PREMIUM_ROOT_USRA_FILE, settings.PREMIUM_USERS_USRA_FILE)
     decrypt_file(settings.PREMIUM_USERS_USRA_FILE, settings.PREMIUM_APPDATA_TXT_FILE)
     encrypt_file(settings.PREMIUM_APPDATA_TXT_FILE, settings.PREMIUM_USERS_USRA_FILE)

@@ -21,4 +21,3 @@ Enter your input: "))
     x = input("Do you want to try again? Type y or n: ")
     if x == "n" or x == "n":
         break
-        

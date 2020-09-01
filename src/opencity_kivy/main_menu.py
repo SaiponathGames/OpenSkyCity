@@ -3,10 +3,10 @@ import os
 import kivy
 # Config.set("kivy", "log_level", "debug")
 from kivy.app import App
-from kivy.lang import Builder
 from kivy.core.audio.audio_sdl2 import MusicSDL2  # noqa
+from kivy.lang import Builder
 from kivy.uix.screenmanager import Screen
-from opencity_kivy.hoverbehavior import HoverBehavior  # noqa
+from .helper import HoverBehavior  # noqa
 
 kivy.require("1.11.1")
 
@@ -28,6 +28,7 @@ class MainMenu(Screen):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         self.background_music_playing = False
+
     def play_background_music(self):  # noqa
         if not self.background_music_playing:
             self.background_music = MusicSDL2(source="c_fast.wav")  # noqa

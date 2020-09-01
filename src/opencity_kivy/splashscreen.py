@@ -3,21 +3,18 @@ import os
 from kivy.animation import Animation
 from kivy.app import App
 from kivy.clock import Clock
-from kivy.config import Config
-
-from opencity_kivy.myanimation import MyAnimation
-
-Config.set('graphics', 'fullscreen', 'auto')
 from kivy.core.audio.audio_sdl2 import MusicSDL2, SoundSDL2  # noqa
+from kivy.properties import StringProperty
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.image import Image
 from kivy.uix.label import Label
 from kivy.uix.screenmanager import NoTransition, Screen, ScreenManager
 from kivy.uix.video import Video
-from opencity_kivy.exit_game_menu import ExitGameScreen
-from opencity_kivy.main_menu import MainMenu
-from kivy.properties import StringProperty
+
+from .exit_game_menu import ExitGameScreen
+from .helper import MyAnimation
+from .main_menu import MainMenu
 
 original_dir = os.path.realpath(os.path.dirname(__file__))
 os.chdir(original_dir)
@@ -98,7 +95,7 @@ class ScreenThree(Screen):
 
     def __init__(self, **kwargs):
         super(ScreenThree, self).__init__(**kwargs)
-        self.video1 = Video(source=os.path.join(original_dir, 'testing', "ny_timelapse_1___7_5s___2k_res.mp4"), opacity=0)
+        self.video1 = Video(source=os.path.join(original_dir, "ny_timelapse_1___7_5s___2k_res.mp4"), opacity=0)
         float_layout = FloatLayout()
         self.label1 = Label(text="Just a place holder video", opacity=0, pos_hint={"x": 0, "bottom": 1}, size_hint=[0.2, 0.1])
         # self.label2 = Label(text="loading video", opacity=0)
@@ -193,7 +190,7 @@ class SplashScreen(Screen):
 
 
 class OpenCityApp(App):
-    icon = StringProperty(os.path.join(original_dir, "OpenCity_Icon.png"))
+    icon = StringProperty(os.path.join(original_dir, "OpenCity_Icon_photoshop.png"))
 
     is_app_stopped = False
 

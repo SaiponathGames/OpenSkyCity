@@ -1,6 +1,6 @@
-import file
-from cryptograph.file_decryptor import decrypt_file
-from cryptograph.file_encryptor import encrypt_file
+from src import file, settings
+from src.cryptograph import decrypt_file
+from src.cryptograph import encrypt_file
 
 
 def special_sandbox_mode_test():
@@ -35,7 +35,7 @@ def special_sandbox_mode_test():
     # os.chdir('..')
     # encrypt_file(file_input, file_output)
     # os.chdir(original_path)
-    import settings
+    # from src import settings
     file.file_copy(settings.SPECIAL_SANDBOX_ROOT_USRA_FILE, settings.SPECIAL_SANDBOX_USERS_USRA_FILE)
     decrypt_file(settings.SPECIAL_SANDBOX_USERS_USRA_FILE, settings.SPECIAL_SANDBOX_APPDATA_TXT_FILE)
     encrypt_file(settings.SPECIAL_SANDBOX_APPDATA_TXT_FILE, settings.SPECIAL_SANDBOX_USERS_USRA_FILE)

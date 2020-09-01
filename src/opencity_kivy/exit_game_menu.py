@@ -2,7 +2,7 @@ import os
 
 from kivy.lang import Builder
 from kivy.uix.screenmanager import Screen
-from opencity_kivy.hoverbehavior import HoverBehavior  # noqa
+from .helper import HoverBehavior  # noqa
 
 original_dir = os.path.realpath(os.path.dirname(__file__))
 os.chdir(original_dir)
