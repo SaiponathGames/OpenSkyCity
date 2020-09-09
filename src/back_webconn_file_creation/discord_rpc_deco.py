@@ -7,7 +7,6 @@ import discord_rpc
 
 @contextlib.contextmanager
 def with_discord_rich_presence(opencity, state):
-
     def _with_discord_rich_presence():
         def readyCallback(current_user):
             print('Our user: {}'.format(current_user))

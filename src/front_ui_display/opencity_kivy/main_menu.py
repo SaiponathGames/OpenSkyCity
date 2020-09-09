@@ -7,13 +7,15 @@ from kivy.core.audio.audio_sdl2 import MusicSDL2  # noqa
 from kivy.lang import Builder
 from kivy.uix.screenmanager import Screen
 from .helper import HoverBehavior  # noqa
+from ...back_webconn_file_creation.settings import Settings
 
 kivy.require("1.11.1")
 
-original_dir = os.path.realpath(os.path.dirname(__file__))
-os.chdir(original_dir)
-
-Builder.load_file("main_menu.kv")
+# original_dir = os.path.realpath(os.path.dirname(__file__))
+# os.chdir(original_dir)
+# print(original_dir, 'main_menu')
+settings = Settings()
+Builder.load_file(str(settings.OPENCITY_KIVY / "main_menu.kv"))
 
 
 # class ImageButton(ButtonBehavior, HoverBehavior, Image):
@@ -31,7 +33,7 @@ class MainMenu(Screen):
 
     def play_background_music(self):  # noqa
         if not self.background_music_playing:
-            self.background_music = MusicSDL2(source="c_fast.wav")  # noqa
+            self.background_music = MusicSDL2(source=str(OPENCITY_KIVY / "c_fast.wav"))  # noqa
             self.background_music.load()
             self.background_music.bind(on_stop=self.on_background_music_stop)
             self.background_music.play()
@@ -42,8 +44,10 @@ class MainMenu(Screen):
         if App.get_running_app().sm.current not in ("main_menu", "exit_game_menu"):
             if self.background_music_playing:
                 self.background_music.stop()
+                self.background_music_playing = False
         else:
             self.background_music.play()
+            self.background_music_playing = True
 
 # sm = ScreenManager(transition=NoTransition())
 # sm.add_widget(MainMenu(name='main_menu'))

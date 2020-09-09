@@ -1,6 +1,6 @@
-from src import settings, file
-from src.cryptograph import decrypt_file
-from src.cryptograph import encrypt_file
+from .. import settings, file
+from ..cryptograph import decrypt_file
+from ..cryptograph import encrypt_file
 
 
 def premium_test():

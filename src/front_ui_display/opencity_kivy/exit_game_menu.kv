@@ -1,0 +1,43 @@
+#:import os os
+#:import ButtonBehavior kivy.uix.behaviors.ButtonBehavior
+#:import HoverBehavior src.front_ui_display.opencity_kivy.helper.HoverBehavior
+#:import OPENCITY_KIVY src.back_webconn_file_creation.settings.OPENCITY_KIVY
+
+<ExitGameScreen>:
+    BoxLayout:
+        orientation: "vertical"
+        BoxLayout:
+            orientation: "horizontal"
+            ImageButton:
+                source: str(OPENCITY_KIVY / "OpenCity-Main_Menu" / "PNG" / "Yes.png")
+                on_press:
+                    self.source =  str(OPENCITY_KIVY / "OpenCity-Main_Menu" / "PNG" / "YesClick.png")
+                on_release:
+                    self.source =  str(OPENCITY_KIVY / "OpenCity-Main_Menu" / "PNG" / "YesHover.png")
+                    app.stop()
+                on_enter:
+                    self.source =  str(OPENCITY_KIVY / "OpenCity-Main_Menu" / "PNG" / "YesHover.png")
+                on_leave:
+                    self.source =  str(OPENCITY_KIVY / "OpenCity-Main_Menu" / "PNG" / "Yes.png")
+            ImageButton:
+                source:  str(OPENCITY_KIVY / "OpenCity-Main_Menu" / "PNG" / "No.png")
+                on_press:
+                    self.source =  str(OPENCITY_KIVY / "OpenCity-Main_Menu" / "PNG" / "NoClick.png")
+                on_release:
+                    self.source =  str(OPENCITY_KIVY / "OpenCity-Main_Menu" / "PNG" / "NoHover.png")
+                    root.manager.current = "main_menu"
+                on_enter:
+                    self.source =  str(OPENCITY_KIVY / "OpenCity-Main_Menu" / "PNG" / "NoHover.png")
+                on_leave:
+                    self.source =  str(OPENCITY_KIVY / "OpenCity-Main_Menu" / "PNG" / "No.png")
+        ImageButton:
+            source: str(OPENCITY_KIVY / "OpenCity-Main_Menu" / "PNG" / "Back.png")
+            on_press:
+                self.source =  str(OPENCITY_KIVY / "OpenCity-Main_Menu" / "PNG" / "BackClick.png")
+            on_release:
+                self.source =  str(OPENCITY_KIVY / "OpenCity-Main_Menu" / "PNG" / "backHover.png")
+                root.manager.current = "main_menu"
+            on_enter:
+                self.source =  str(OPENCITY_KIVY / "OpenCity-Main_Menu" / "PNG" / "BackHover.png")
+            on_leave:
+                self.source =  str(OPENCITY_KIVY / "OpenCity-Main_Menu" / "PNG" / "Back.png")

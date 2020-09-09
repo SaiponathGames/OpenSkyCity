@@ -2,12 +2,16 @@ import os
 
 from kivy.lang import Builder
 from kivy.uix.screenmanager import Screen
+from ...back_webconn_file_creation.settings import Settings
+
 from .helper import HoverBehavior  # noqa
 
-original_dir = os.path.realpath(os.path.dirname(__file__))
-os.chdir(original_dir)
+settings = Settings()
+# original_dir = os.path.realpath(os.path.dirname(__file__))
+# print(original_dir)
+# os.chdir(original_dir)
 
-Builder.load_file("exit_game_menu.kv")
+Builder.load_file(str(settings.OPENCITY_KIVY / "exit_game_menu.kv"))
 
 
 class ExitGameScreen(Screen):

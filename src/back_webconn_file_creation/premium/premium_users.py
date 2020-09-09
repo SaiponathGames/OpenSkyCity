@@ -1,4 +1,4 @@
-from src import reusable_code, settings
+from .. import reusable_code, settings
 
 
 def premium_users_writer():

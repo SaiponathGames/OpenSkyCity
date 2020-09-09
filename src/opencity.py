@@ -1,27 +1,27 @@
 import sys
 
-from .opencity_kivy.splashscreen import OpenCityApp
+from .front_ui_display.opencity_kivy.splashscreen import OpenCityApp
 
 
 class OpenCity(OpenCityApp):
-    build_version = "0.00.000.0250"
-    Version = "0.6"
+    build_version = "0.00.000.0345"
+    Version = "0.7"
     Premium = True
     Special_sandbox = True
     debug = False
     Name = "OpenCity"
+    start_screen = "main_menu"
 
 
 __version__ = OpenCity.Version
 
 
 def main():
-    from .discord_rpc_deco import with_discord_rich_presence
+    from .back_webconn_file_creation.discord_rpc_deco import with_discord_rich_presence
     from kivy.config import Config
 
     Config.set('kivy', 'log_level', 'info')
-    Config.set('graphics', 'fullscreen', 'auto')
-    if sys.platform.startswith(('win', 'linux')):  # noqa
+    if sys.platform.startswith(('win', 'linux')):
         Config.set('input', 'mouse', 'mouse,disable_multitouch')  # noqa
     opencity = OpenCity()
     print("{} v{} \nBuild ({}) \n\n\n".format(OpenCity.Name, OpenCity.Version, OpenCity.build_version))
