@@ -1,10 +1,16 @@
 #:import HoverBehavior src.front_ui_display.opencity_kivy.helper.HoverBehavior
 #:import os os
-#:import OPENCITY_KIVY src.back_webconn_file_creation.settings.OPENCITY_KIVY
+#:import Settings src.back_webconn_file_creation.settings.Settings
 
+#:set OPENCITY_KIVY Settings().OPENCITY_KIVY
 
 <ImageButton@ButtonBehavior+HoverBehavior+Image>
-#    size_hint: 0.2, 0.2
+    size_hint_x: None
+    size_hint_y: None
+    size: self.texture_size
+    width: self.texture_size[0]
+    height: self.texture_size[1]
+
 #    pos_hint: {"x": 0.2, "y": 0.5}
     canvas.after:
         Color:

@@ -76,7 +76,7 @@ class ScreenTwo(Screen):
     def on_anim1_start(self, *args):  # noqa
         if audio_playback:
             self.label1.text = "Just a place holder audio"
-            sound1 = MusicSDL2(source=str(OPENCITY_KIVY, "OpenCity1.mp3"))
+            sound1 = MusicSDL2(source=str(OPENCITY_KIVY / "OpenCity1.mp3"))
             sound1.load()
             sound1.play()
 

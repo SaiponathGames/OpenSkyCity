@@ -19,7 +19,7 @@ def decrypt_file(input_file, output_file):
 
 
 def encrypt_file(input_file, output_file):
-    key = binary_file_read(settings._KEYS_FILE)[0]
+    key = binary_file_read(settings_.KEYS_FILE)[0]
     data = binary_file_read(input_file)
     binary_file_write(output_file, Fernet(key).encrypt(data))
 

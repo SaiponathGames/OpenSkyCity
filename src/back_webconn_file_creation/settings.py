@@ -47,8 +47,8 @@ class Settings:
     SAVES_FILE_FORMATTED = 'save{number}_{map_name}.save'
 
     # Map file
-    MAPS_FOLDER = HOME_FOLDER / 'Maps'
-    MAP_FILE_FORMATTED = '{map_name}.map'
+    CITY_FOLDER = HOME_FOLDER / 'Cities'
+    CITY_FILE_FORMATTED = '{city_name}.city'
 
     ROOTS = [BACKEND_FOLDER, HOME_FOLDER, APPDATA_FOLDER]
 
@@ -81,7 +81,7 @@ class Settings:
     ]
 
     SAVES_AND_MAPS = [
-        MAPS_FOLDER,
+        CITY_FOLDER,
         SAVES_FOLDER
     ]
 
@@ -106,3 +106,9 @@ class Settings:
     KEYS_FILE = BACKEND_FOLDER / 'keys.key'
 
     OPENCITY_KIVY = FRONT_END_FOLDER / 'opencity_kivy'
+
+    ASSET_FILE_FORMATTED = "{asset_name}.asset"
+    MOD_FILE_FORMATTED = "{mod_name}.mod"
+    PLUGIN_FILE_FORMATTED = "{plugin_name}.plugin"
+    THEME_FILE_FORMATTED = "{theme_name}.theme"
+    MAP_FILE_FORMATTED = "{map_name}.map"

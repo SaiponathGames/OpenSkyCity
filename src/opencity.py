@@ -4,8 +4,8 @@ from .front_ui_display.opencity_kivy.splashscreen import OpenCityApp
 
 
 class OpenCity(OpenCityApp):
-    build_version = "0.00.000.0345"
-    Version = "0.7"
+    build_version = "0.00.000.0375"
+    Version = "0.8"
     Premium = True
     Special_sandbox = True
     debug = False

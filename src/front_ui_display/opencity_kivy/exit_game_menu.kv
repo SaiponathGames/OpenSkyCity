@@ -1,7 +1,8 @@
 #:import os os
 #:import ButtonBehavior kivy.uix.behaviors.ButtonBehavior
 #:import HoverBehavior src.front_ui_display.opencity_kivy.helper.HoverBehavior
-#:import OPENCITY_KIVY src.back_webconn_file_creation.settings.OPENCITY_KIVY
+#:import Settings src.back_webconn_file_creation.settings.Settings
+#:set OPENCITY_KIVY Settings().OPENCITY_KIVY
 
 <ExitGameScreen>:
     BoxLayout:

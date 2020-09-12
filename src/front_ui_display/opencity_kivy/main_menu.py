@@ -33,7 +33,7 @@ class MainMenu(Screen):
 
     def play_background_music(self):  # noqa
         if not self.background_music_playing:
-            self.background_music = MusicSDL2(source=str(OPENCITY_KIVY / "c_fast.wav"))  # noqa
+            self.background_music = MusicSDL2(source=str(settings.OPENCITY_KIVY / "c_fast.wav"))  # noqa
             self.background_music.load()
             self.background_music.bind(on_stop=self.on_background_music_stop)
             self.background_music.play()
