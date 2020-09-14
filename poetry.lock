@@ -109,6 +109,14 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 version = "0.16"
 
 [[package]]
+category = "main"
+description = "A cython implementation of an ffmpeg based player."
+name = "ffpyplayer"
+optional = false
+python-versions = "*"
+version = "4.3.1"
+
+[[package]]
 category = "dev"
 description = "A platform independent file lock."
 name = "filelock"
@@ -308,14 +316,6 @@ version = "2.20"
 
 [[package]]
 category = "main"
-description = "A port of node.js's EventEmitter to python."
-name = "pyee"
-optional = false
-python-versions = "*"
-version = "7.0.3"
-
-[[package]]
-category = "main"
 description = "Pygments is a syntax highlighting package written in Python."
 name = "pygments"
 optional = false
@@ -361,17 +361,6 @@ version = "223"
 
 [package.dependencies]
 pywin32 = ">=223"
-
-[[package]]
-category = "main"
-description = "A python interface for FFmpeg"
-name = "python-ffmpeg"
-optional = false
-python-versions = "*"
-version = "1.0.11"
-
-[package.dependencies]
-pyee = "*"
 
 [[package]]
 category = "main"
@@ -505,7 +494,7 @@ docs = ["proselint (>=0.10.2)", "sphinx (>=3)", "sphinx-argparse (>=0.2.5)", "sp
 testing = ["coverage (>=5)", "coverage-enable-subprocess (>=1)", "flaky (>=3)", "pytest (>=4)", "pytest-env (>=0.6.2)", "pytest-freezegun (>=0.4.1)", "pytest-mock (>=2)", "pytest-randomly (>=1)", "pytest-timeout (>=1)", "pytest-xdist (>=1.31.0)", "packaging (>=20.0)", "xonsh (>=0.9.16)"]
 
 [metadata]
-content-hash = "d7493f26d5929512c852c792a6fcf068dbec9a50806b67088d9fc4e7b187cb9d"
+content-hash = "301e63da8a93bc7b17e18b7c84166e2b52ea3cecf4029f7af0ff1827a402d8c1"
 lock-version = "1.0"
 python-versions = "^3.8"
 
@@ -630,6 +619,22 @@ distlib = [
 docutils = [
     {file = "docutils-0.16-py2.py3-none-any.whl", hash = "sha256:0c5b78adfbf7762415433f5515cd5c9e762339e23369dbe8000d84a4bf4ab3af"},
     {file = "docutils-0.16.tar.gz", hash = "sha256:c2de3a60e9e7d07be26b7f2b00ca0309c207e06c100f9cc2a94931fc75a478fc"},
+]
+ffpyplayer = [
+    {file = "ffpyplayer-4.3.1-cp35-cp35m-manylinux2010_x86_64.whl", hash = "sha256:17bdfd39573e649d3976006340634ed27c2312fa483d4166d68c85ed85f5ee96"},
+    {file = "ffpyplayer-4.3.1-cp36-cp36m-macosx_10_9_x86_64.macosx_10_9_intel.macosx_10_10_intel.macosx_10_10_x86_64.whl", hash = "sha256:95a34f60efc48fe2d3f08277d01559f4b1c6e1b2bc8dad14f2ce34191193f6c5"},
+    {file = "ffpyplayer-4.3.1-cp36-cp36m-manylinux2010_x86_64.whl", hash = "sha256:9e5e3a11df8f07b171384137707fd26df81bedd1762ebd8f43f002d80d8e6176"},
+    {file = "ffpyplayer-4.3.1-cp36-cp36m-win32.whl", hash = "sha256:72ea1b0f31ebdeaeaebbcc56e52e8fd16a6d4facdacadf8c9b30ca56b2b9abcb"},
+    {file = "ffpyplayer-4.3.1-cp36-cp36m-win_amd64.whl", hash = "sha256:dcfce97f57793005b8b15799de96db205780d90856c6ae2c6aba3a89b2591c9a"},
+    {file = "ffpyplayer-4.3.1-cp37-cp37m-macosx_10_9_x86_64.macosx_10_9_intel.macosx_10_10_intel.macosx_10_10_x86_64.whl", hash = "sha256:73081d8646de3281d44b4c1a2d627b9a4e3e0237530e5d77f5dcc85b47286c4d"},
+    {file = "ffpyplayer-4.3.1-cp37-cp37m-manylinux2010_x86_64.whl", hash = "sha256:57ce03db15c5bda150340f1f5df59b3b2a7ab92c11fc50252d9b0ba35010bdc4"},
+    {file = "ffpyplayer-4.3.1-cp37-cp37m-win32.whl", hash = "sha256:a3ba52c29cd5278dc2268fb67300fee830f5ceee02940b92e7a3e6a4cb350131"},
+    {file = "ffpyplayer-4.3.1-cp37-cp37m-win_amd64.whl", hash = "sha256:206c45660a553263d51f8a6abe679ba2966cee4979fdfc25e7385812f3e990fa"},
+    {file = "ffpyplayer-4.3.1-cp38-cp38-macosx_10_9_x86_64.macosx_10_9_intel.macosx_10_10_intel.macosx_10_10_x86_64.whl", hash = "sha256:db21a1bd0f384ae544d2f12f16521c0fea5c355e965c703aed23a58fd225c9cf"},
+    {file = "ffpyplayer-4.3.1-cp38-cp38-manylinux2010_x86_64.whl", hash = "sha256:d63ca5174722155d2bad273351262d0a894c2a67c9945ac93e974fb9fbf63392"},
+    {file = "ffpyplayer-4.3.1-cp38-cp38-win32.whl", hash = "sha256:08c516f62cce0da010a45c32d1ce3c5816500d91b083a77c08e7eadddfe4f25a"},
+    {file = "ffpyplayer-4.3.1-cp38-cp38-win_amd64.whl", hash = "sha256:4038e5adaac6bf0a902bcd6abdb27cbc4350b0405c238c31460825145bba840e"},
+    {file = "ffpyplayer-4.3.1.tar.gz", hash = "sha256:5c25ad57ef3ea54884bb00534757b966140ba516217ba518d52ccdff4c3398e6"},
 ]
 filelock = [
     {file = "filelock-3.0.12-py3-none-any.whl", hash = "sha256:929b7d63ec5b7d6b71b0fa5ac14e030b3f70b75747cef1b10da9b879fef15836"},
@@ -761,10 +766,6 @@ pycparser = [
     {file = "pycparser-2.20-py2.py3-none-any.whl", hash = "sha256:7582ad22678f0fcd81102833f60ef8d0e57288b6b5fb00323d101be910e35705"},
     {file = "pycparser-2.20.tar.gz", hash = "sha256:2d475327684562c3a96cc71adf7dc8c4f0565175cf86b6d7a404ff4c771f15f0"},
 ]
-pyee = [
-    {file = "pyee-7.0.3-py2.py3-none-any.whl", hash = "sha256:a7bbe21b7fb2ba05fba48af685e8e4df81a71bcb8861d4046dd72089675ef605"},
-    {file = "pyee-7.0.3.tar.gz", hash = "sha256:30c3e90bb44311af98e0958cae7c5a3acbbfb35b0ec87f7fa1275ba9e12e31f3"},
-]
 pygments = [
     {file = "Pygments-2.6.1-py3-none-any.whl", hash = "sha256:ff7a40b4860b727ab48fad6360eb351cc1b33cbf9b15a0f689ca5353e9463324"},
     {file = "Pygments-2.6.1.tar.gz", hash = "sha256:647344a061c249a3b74e230c739f434d7ea4d8b1d5f3721bc0f3558049b38f44"},
@@ -779,10 +780,6 @@ pyinstaller-hooks-contrib = [
 pypiwin32 = [
     {file = "pypiwin32-223-py3-none-any.whl", hash = "sha256:67adf399debc1d5d14dffc1ab5acacb800da569754fafdc576b2a039485aa775"},
     {file = "pypiwin32-223.tar.gz", hash = "sha256:71be40c1fbd28594214ecaecb58e7aa8b708eabfa0125c8a109ebd51edbd776a"},
-]
-python-ffmpeg = [
-    {file = "python-ffmpeg-1.0.11.tar.gz", hash = "sha256:bdf38ba5052f7128241a217a4411664e1047afa959416b30f133a3a349428e4c"},
-    {file = "python_ffmpeg-1.0.11-py3-none-any.whl", hash = "sha256:4eb946e7457ff5db9ce1cbe138ecdbe53e7bfe4a15a78b39051fba6b64919f36"},
 ]
 pywin32 = [
     {file = "pywin32-228-cp27-cp27m-win32.whl", hash = "sha256:37dc9935f6a383cc744315ae0c2882ba1768d9b06700a70f35dc1ce73cd4ba9c"},
