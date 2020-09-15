@@ -10,16 +10,15 @@ from kivy.uix.label import Label
 from kivy.uix.screenmanager import NoTransition, Screen, ScreenManager
 from kivy.uix.video import Video
 
-from src.back_webconn_file_creation.settings import Settings
+# from src.back_webconn_file_creation.settings import Settings
 from .exit_game_menu import ExitGameScreen
 from .helper import MyAnimation
 from .main_menu import MainMenu
 
-# OPENCITY_KIVY = os.path.realpath(os.path.dirname(__file__))
-OPENCITY_KIVY = Settings().OPENCITY_KIVY
-# os.chdir(OPENCITY_KIVY)
+# settings.OPENCITY_KIVY = os.path.realpath(os.path.dirname(__file__))
+# os.chdir(settings.OPENCITY_KIVY)
 
-# print(OPENCITY_KIVY, "splash_screen")
+# print(settings.OPENCITY_KIVY, "splash_screen")
 audio_playback = True
 
 
@@ -30,8 +29,9 @@ def do_nothing(*args):
 
 class ScreenOne(Screen):
     def __init__(self, **kwargs):
+        self.settings = kwargs.pop('settings')
         super().__init__(**kwargs)
-        self.img = Image(source=str(OPENCITY_KIVY / "Spar Interactive.png"), opacity=0)
+        self.img = Image(source=str(self.settings.OPENCITY_KIVY / "Spar Interactive.png"), opacity=0)
         box_layout = BoxLayout()
         self.add_widget(box_layout)
         box_layout.add_widget(self.img)
@@ -49,9 +49,10 @@ class ScreenOne(Screen):
 
 class ScreenTwo(Screen):
     def __init__(self, **kwargs):
+        self.settings = kwargs.pop('settings')
         super().__init__(**kwargs)
-        self.img2 = Image(source=str(OPENCITY_KIVY / "OpenCity_Icon.png"), opacity=0)
-        self.img3 = Image(source=str(OPENCITY_KIVY / "opencityicon (1).png"), opacity=0)
+        self.img2 = Image(source=str(self.settings.OPENCITY_KIVY / "OpenCity_Icon.png"), opacity=0)
+        self.img3 = Image(source=str(self.settings.OPENCITY_KIVY / "opencityicon (1).png"), opacity=0)
         self.label1 = Label(text="Just a place holder audio", opacity=0, pos_hint={"x": 0, "bottom": 1}, size_hint=[0.2, 0.1])
         your_anim = Animation(d=4, opacity=1)
         your_anim.bind(on_start=self.on_anim1_start)
@@ -76,7 +77,7 @@ class ScreenTwo(Screen):
     def on_anim1_start(self, *args):  # noqa
         if audio_playback:
             self.label1.text = "Just a place holder audio"
-            sound1 = MusicSDL2(source=str(OPENCITY_KIVY / "OpenCity1.mp3"))
+            sound1 = MusicSDL2(source=str(self.settings.OPENCITY_KIVY / "OpenCity1.mp3"))
             sound1.load()
             sound1.play()
 
@@ -94,8 +95,9 @@ class ScreenTwo(Screen):
 class ScreenThree(Screen):
 
     def __init__(self, **kwargs):
+        self.settings = kwargs.pop('settings')
         super(ScreenThree, self).__init__(**kwargs)
-        self.video1 = Video(source=str(OPENCITY_KIVY / "ny_timelapse_1___7_5s___2k_res.mp4"), opacity=0)
+        self.video1 = Video(source=str(self.settings.OPENCITY_KIVY / "ny_timelapse_1___7_5s___2k_res.mp4"), opacity=0)
         float_layout = FloatLayout()
         self.label1 = Label(text="Just a place holder video", opacity=0, pos_hint={"x": 0, "bottom": 1}, size_hint=[0.2, 0.1])
         # self.label2 = Label(text="loading video", opacity=0)
@@ -142,12 +144,13 @@ class ScreenThree(Screen):
 
 class KivySplash(Screen):
     def __init__(self, **kwargs):
+        self.settings = kwargs.pop('settings')
         super(KivySplash, self).__init__(**kwargs)
         # anim1 = MyAnimation(duration=4, opacity=0)
         # anim1.bind(on_complete=self.on_anim1_complete)
         # self.animation1 = MyAnimation(duration=3) + MyAnimation(duration=4, opacity=1) + MyAnimation(duration=5) + anim1
-        self.img1 = Image(source=str(OPENCITY_KIVY / "Kivy-logo-black-512.png"), opacity=0)
-        self.img2 = Image(source=str(OPENCITY_KIVY / "python-powered-w-200x80.png"), opacity=0)
+        self.img1 = Image(source=str(self.settings.OPENCITY_KIVY / "Kivy-logo-black-512.png"), opacity=0)
+        self.img2 = Image(source=str(self.settings.OPENCITY_KIVY / "python-powered-w-200x80.png"), opacity=0)
         self.label1 = Label(text="Powered by:", font_size=48, opacity=0)
         anim1 = MyAnimation(duration=4, opacity=0)
         self.i1 = 0
@@ -191,8 +194,7 @@ class SplashScreen(Screen):
 
 class OpenCityApp(App):
     start_screen = None
-
-    icon = StringProperty(str(OPENCITY_KIVY / "OpenCity_Icon_photoshop.png"))
+    settings = None
 
     is_app_stopped = False
 
@@ -200,7 +202,8 @@ class OpenCityApp(App):
         self.is_app_stopped = True
 
     def build(self):
-        self.sound1 = SoundSDL2(source=str(OPENCITY_KIVY / "button_press.mp3"))  # noqa # same given below.
+        self.icon = StringProperty(str(self.settings.OPENCITY_KIVY / "OpenCity_Icon_photoshop.png"))
+        self.sound1 = SoundSDL2(source=str(self.settings.OPENCITY_KIVY / "button_press.mp3"))  # noqa # same given below.
         self.sound1.load()
         self.sm = ScreenManager(transition=NoTransition())  # noqa # noqa for attribute not in __init__.
         self.sm.add_widget(ScreenOne(name="screen_one"))

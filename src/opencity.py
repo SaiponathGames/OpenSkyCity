@@ -1,5 +1,7 @@
 import sys
 
+from back_webconn_file_creation.settings import Settings
+
 from .front_ui_display.opencity_kivy.splashscreen import OpenCityApp
 
 
@@ -11,9 +13,11 @@ class OpenCity(OpenCityApp):
     debug = False
     Name = "OpenCity"
     start_screen = "main_menu"
+    settings = Settings(Version)
 
 
 __version__ = OpenCity.Version
+settings = OpenCity.settings
 
 
 def main():

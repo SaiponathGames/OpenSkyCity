@@ -1,6 +1,8 @@
 def file_read(input_file, **kwargs):
+    as_list = kwargs.pop('as_list', False)
     with open(input_file, "r", **kwargs) as __in__:
-        return [data.replace('\n', '') for data in __in__]
+        # print([data.replace('\n', '') for data in __in__.readlines()])
+        return [data.replace('\n', '') for data in __in__.readlines()] if as_list else __in__.read()
 
 
 def file_write(output_file, content, **kwargs):
@@ -14,8 +16,9 @@ def file_append(output_file, content, **kwargs):
 
 
 def binary_file_read(input_file, **kwargs):
+    as_list = kwargs.pop('as_list')
     with open(input_file, "rb", **kwargs) as __in__:
-        return [bytes_1 for bytes_1 in __in__]
+        return [data.replace(b'\n', b'') for data in __in__.readlines()] if as_list else __in__.read()
 
 
 def binary_file_write(output_file, bytes_1, **kwargs):

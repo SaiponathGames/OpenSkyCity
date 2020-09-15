@@ -1,8 +1,8 @@
 #:import HoverBehavior src.front_ui_display.opencity_kivy.helper.HoverBehavior
 #:import os os
-#:import Settings src.back_webconn_file_creation.settings.Settings
+#:import settings src.opencity.settings
 
-#:set OPENCITY_KIVY Settings().OPENCITY_KIVY
+#:set OPENCITY_KIVY settings.OPENCITY_KIVY
 
 <ImageButton@ButtonBehavior+HoverBehavior+Image>
     size_hint_x: None

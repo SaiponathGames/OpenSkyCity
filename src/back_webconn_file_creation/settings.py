@@ -8,107 +8,111 @@ import appdirs
 
 
 class Settings:
-    appdirs_data = appdirs.AppDirs('OpenCity', 'Spar Interactive', "0.7")
-    # Main folders
-    SOURCE_FOLDER = pathlib.Path(__file__).absolute().parent.parent
-    BACKEND_FOLDER = pathlib.Path(__file__).absolute().parent
-    FRONT_END_FOLDER = SOURCE_FOLDER / 'front_ui_display'
-    HOME_FOLDER = pathlib.Path.home() / appdirs_data.appauthor / appdirs_data.appname / appdirs_data.version
-    APPDATA_FOLDER = pathlib.Path(appdirs_data.user_data_dir)
+    def __init__(self, version, home_folder=None, app_data_folder=None):
+        self.appdirs_data = appdirs.AppDirs('OpenCity', 'Spar Interactive', version)
+        # Main folders
+        self.SOURCE_FOLDER = pathlib.Path(__file__).absolute().parent.parent
+        self.BACKEND_FOLDER = pathlib.Path(__file__).absolute().parent
+        self.FRONT_END_FOLDER = self.SOURCE_FOLDER / 'front_ui_display'
+        self.HOME_FOLDER = ((home_folder and pathlib.Path(home_folder)) or pathlib.Path.home()) / self.appdirs_data.appauthor / self.appdirs_data.appname / self.appdirs_data.version
+        self.APPDATA_FOLDER = ((app_data_folder and pathlib.Path(app_data_folder) / self.appdirs_data.appauthor / self.appdirs_data.appname / self.appdirs_data.version) or pathlib.Path(self.appdirs_data.user_data_dir))
 
-    # Plugin folders
-    PLUGINS_FOLDER = HOME_FOLDER / 'Plugins'
-    PLUGINS_ASSETS_FOLDER = PLUGINS_FOLDER / 'Assets'
-    PLUGINS_MAPS_FOLDER = PLUGINS_FOLDER / 'Maps'
-    PLUGINS_THEMES_FOLDER = PLUGINS_FOLDER / 'Themes'
-    PLUGINS_MODS_FOLDER = PLUGINS_FOLDER / 'Mods'
+        # Plugin folders
+        self.PLUGINS_FOLDER = self.HOME_FOLDER / 'Plugins'
+        self.PLUGINS_ASSETS_FOLDER = self.PLUGINS_FOLDER / 'Assets'
+        self.PLUGINS_MAPS_FOLDER = self.PLUGINS_FOLDER / 'Maps'
+        self.PLUGINS_THEMES_FOLDER = self.PLUGINS_FOLDER / 'Themes'
+        self.PLUGINS_MODS_FOLDER = self.PLUGINS_FOLDER / 'Mods'
 
-    # music folder
-    MUSIC_FOLDER = HOME_FOLDER / 'Music'
+        # music folder
+        self.MUSIC_FOLDER = self.HOME_FOLDER / 'Music'
 
-    # Premium folders with cache.
-    PREMIUM_BACKEND_FOLDER = BACKEND_FOLDER / 'premium'
-    PREMIUM_USERS_FOLDER = HOME_FOLDER / 'Premium'
-    PREMIUM_APPDATA_FOLDER = APPDATA_FOLDER / 'Premium'
-    PREMIUM_ROOT_USRA_FILE = PREMIUM_BACKEND_FOLDER / 'premium_users.usra'
-    PREMIUM_APPDATA_TXT_FILE = PREMIUM_APPDATA_FOLDER / 'premium_users.txt'
-    PREMIUM_USERS_USRA_FILE = PREMIUM_USERS_FOLDER / 'premium_users.usra'
+        # Premium folders with cache.
+        self.PREMIUM_BACKEND_FOLDER = self.BACKEND_FOLDER / 'premium'
+        self.PREMIUM_USERS_FOLDER = self.HOME_FOLDER / 'Premium'
+        self.PREMIUM_APPDATA_FOLDER = self.APPDATA_FOLDER / 'Premium'
+        self.PREMIUM_ROOT_USRA_FILE = self.PREMIUM_BACKEND_FOLDER / 'premium_users.usra'
+        self.PREMIUM_APPDATA_TXT_FILE = self.PREMIUM_APPDATA_FOLDER / 'premium_users.txt'
+        self.PREMIUM_USERS_USRA_FILE = self.PREMIUM_USERS_FOLDER / 'premium_users.usra'
 
-    # Special Sandbox folders with cache.
-    SPECIAL_SANDBOX_APPDATA_FOLDER = APPDATA_FOLDER / 'Special Sandbox'
-    SPECIAL_SANDBOX_BACKEND_FOLDER = BACKEND_FOLDER / 'special_sandbox'
-    SPECIAL_SANDBOX_USERS_FOLDER = HOME_FOLDER / 'Special Sandbox'
-    SPECIAL_SANDBOX_APPDATA_TXT_FILE = SPECIAL_SANDBOX_APPDATA_FOLDER / 'special_sandbox_users.txt'
-    SPECIAL_SANDBOX_USERS_USRA_FILE = SPECIAL_SANDBOX_USERS_FOLDER / 'special_sandbox_users.usra'
-    SPECIAL_SANDBOX_ROOT_USRA_FILE = SPECIAL_SANDBOX_BACKEND_FOLDER / 'special_sandbox_users.usra'
+        # Special Sandbox folders with cache.
+        self.SPECIAL_SANDBOX_APPDATA_FOLDER = self.APPDATA_FOLDER / 'Special Sandbox'
+        self.SPECIAL_SANDBOX_BACKEND_FOLDER = self.BACKEND_FOLDER / 'special_sandbox'
+        self.SPECIAL_SANDBOX_USERS_FOLDER = self.HOME_FOLDER / 'Special Sandbox'
+        self.SPECIAL_SANDBOX_APPDATA_TXT_FILE = self.SPECIAL_SANDBOX_APPDATA_FOLDER / 'special_sandbox_users.txt'
+        self.SPECIAL_SANDBOX_USERS_USRA_FILE = self.SPECIAL_SANDBOX_USERS_FOLDER / 'special_sandbox_users.usra'
+        self.SPECIAL_SANDBOX_ROOT_USRA_FILE = self.SPECIAL_SANDBOX_BACKEND_FOLDER / 'special_sandbox_users.usra'
 
-    # Save files and folder
-    SAVES_FOLDER = HOME_FOLDER / 'Saves'
-    SAVES_FILE_FORMATTED = 'save{number}_{map_name}.save'
+        # Save files and folder
+        self.SAVES_FOLDER = self.HOME_FOLDER / 'Saves'
+        self.SAVES_FILE_FORMATTED = 'save{number}_{city_name}.save'
 
-    # Map file
-    CITY_FOLDER = HOME_FOLDER / 'Cities'
-    CITY_FILE_FORMATTED = '{city_name}.city'
+        # Map file
+        self.CITY_FOLDER = self.HOME_FOLDER / 'Cities'
+        self.CITY_FILE_FORMATTED = '{city_name}.city'
 
-    ROOTS = [BACKEND_FOLDER, HOME_FOLDER, APPDATA_FOLDER]
+        self.ROOTS = [self.HOME_FOLDER, self.APPDATA_FOLDER]
 
-    PLUGIN_FOLDERS = [
-        PLUGINS_FOLDER,
-        PLUGINS_ASSETS_FOLDER,
-        PLUGINS_MAPS_FOLDER,
-        PLUGINS_THEMES_FOLDER,
-        PLUGINS_MODS_FOLDER
-    ]
+        self.PLUGIN_FOLDERS = [
+            self.PLUGINS_FOLDER,
+            self.PLUGINS_ASSETS_FOLDER,
+            self.PLUGINS_MAPS_FOLDER,
+            self.PLUGINS_THEMES_FOLDER,
+            self.PLUGINS_MODS_FOLDER
+        ]
 
-    MUSIC_FOLDERS = [MUSIC_FOLDER]
+        self.MUSIC_FOLDERS = [self.MUSIC_FOLDER]
 
-    PREMIUM_FOLDERS_AND_FILES = [
-        PREMIUM_BACKEND_FOLDER,
-        PREMIUM_APPDATA_FOLDER,
-        PREMIUM_USERS_FOLDER,
-        PREMIUM_USERS_USRA_FILE,
-        PREMIUM_APPDATA_TXT_FILE,
-        PREMIUM_ROOT_USRA_FILE
-    ]
+        self.PREMIUM_FOLDERS_AND_FILES = [
+            self.PREMIUM_APPDATA_FOLDER,
+            self.PREMIUM_USERS_FOLDER,
+            self.PREMIUM_USERS_USRA_FILE,
+            self.PREMIUM_APPDATA_TXT_FILE
+        ]
 
-    SPECIAL_SANDBOX_FOLDERS_AND_FILES = [
-        SPECIAL_SANDBOX_BACKEND_FOLDER,
-        SPECIAL_SANDBOX_APPDATA_FOLDER,
-        SPECIAL_SANDBOX_USERS_FOLDER,
-        SPECIAL_SANDBOX_ROOT_USRA_FILE,
-        SPECIAL_SANDBOX_USERS_USRA_FILE,
-        SPECIAL_SANDBOX_APPDATA_TXT_FILE
-    ]
+        self.SPECIAL_SANDBOX_FOLDERS_AND_FILES = [
+            self.SPECIAL_SANDBOX_APPDATA_FOLDER,
+            self.SPECIAL_SANDBOX_USERS_FOLDER,
+            self.SPECIAL_SANDBOX_USERS_USRA_FILE,
+            self.SPECIAL_SANDBOX_APPDATA_TXT_FILE
+        ]
 
-    SAVES_AND_MAPS = [
-        CITY_FOLDER,
-        SAVES_FOLDER
-    ]
+        self.SAVES_AND_MAPS = [
+            self.SAVES_FOLDER
+        ]
 
-    ALL_FOLDERS = [
-        ROOTS,
-        PLUGIN_FOLDERS,
-        MUSIC_FOLDERS,
-        SAVES_AND_MAPS,
-        PREMIUM_FOLDERS_AND_FILES,
-        SPECIAL_SANDBOX_FOLDERS_AND_FILES
-    ]
+        self.ALL_FOLDERS = [
+            self.ROOTS,
+            self.PLUGIN_FOLDERS,
+            [self.CITY_FOLDER],
+            self.MUSIC_FOLDERS,
+            self.PREMIUM_FOLDERS_AND_FILES,
+            self.SPECIAL_SANDBOX_FOLDERS_AND_FILES
+        ]
+        self.OPENCITY_KIVY = self.FRONT_END_FOLDER / 'opencity_kivy'
+        self.SOURCE_FOLDERS = [self.SOURCE_FOLDER, self.BACKEND_FOLDER, self.FRONT_END_FOLDER]
+        self.SPECIAL_SANDBOX_ROOT_FOLDERS_AND_FILES = [
+            self.SPECIAL_SANDBOX_BACKEND_FOLDER,
+            self.SPECIAL_SANDBOX_ROOT_USRA_FILE
+        ]
+        self.PREMIUM_ROOT_FOLDERS_AND_FILES = [
+            self.PREMIUM_BACKEND_FOLDER,
+            self.PREMIUM_ROOT_USRA_FILE
+        ]
 
-    # Premium and Special Sandbox based Settings
-    PREMIUM_ID_START = 10000000000
-    PREMIUM_ID_END = 99999999999
-    PREMIUM_KEY_LENGTH = 25
+        # Premium and Special Sandbox based Settings
+        self.PREMIUM_ID_START = 10000000000
+        self.PREMIUM_ID_END = 99999999999
+        self.PREMIUM_KEY_LENGTH = 25
 
-    SPECIAL_SANDBOX_ID_START = 100000000000000000000000000000
-    SPECIAL_SANDBOX_ID_END = 999999999999999999999999999999
-    SPECIAL_SANDBOX_KEY_LENGTH = 35
+        self.SPECIAL_SANDBOX_ID_START = 100000000000000000000000000000
+        self.SPECIAL_SANDBOX_ID_END = 999999999999999999999999999999
+        self.SPECIAL_SANDBOX_KEY_LENGTH = 35
 
-    KEYS_FILE = BACKEND_FOLDER / 'keys.key'
+        self.KEYS_FILE = self.BACKEND_FOLDER / 'keys.key'
 
-    OPENCITY_KIVY = FRONT_END_FOLDER / 'opencity_kivy'
-
-    ASSET_FILE_FORMATTED = "{asset_name}.asset"
-    MOD_FILE_FORMATTED = "{mod_name}.mod"
-    PLUGIN_FILE_FORMATTED = "{plugin_name}.plugin"
-    THEME_FILE_FORMATTED = "{theme_name}.theme"
-    MAP_FILE_FORMATTED = "{map_name}.map"
+        self.ASSET_FILE_FORMATTED = "{asset_name}.asset"
+        self.MOD_FILE_FORMATTED = "{mod_name}.mod"
+        self.PLUGIN_FILE_FORMATTED = "{plugin_name}.plugin"
+        self.THEME_FILE_FORMATTED = "{theme_name}.theme"
+        self.MAP_FILE_FORMATTED = "{map_name}.map"
