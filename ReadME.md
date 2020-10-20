@@ -1,4 +1,4 @@
-OpenCity!!!
+OpenSkyCity!!!
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 WIP - Working In Progress 
@@ -7,7 +7,7 @@ ________________________________________________________________________________
 This is a Work In Progress game! 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Hello everyone, I am Sairam, the developer of OpenCity, A city simulation game, with 3d graphics, for now I have done 2% of game! The SplashScreen I didn't have good video to place in VideoPlaceHolder.
+Hello everyone, I am Sairam, the developer of OpenSkyCity, A city simulation game, with 3d graphics, for now I have done 2% of game! The SplashScreen I didn't have good video to place in VideoPlaceHolder.
 
 1. Download the files from Master branch of github.
 2. Get Python 3.8.2+ from https://www.python.org/downloads/release/python-382/
