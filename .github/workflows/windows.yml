@@ -43,6 +43,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Build OpenSkyCity
         run: |
+          poetry shell
           pyinstaller opencity.spec
       
       - name: Upload a Build Artifact
