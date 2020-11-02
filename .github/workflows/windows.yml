@@ -6,9 +6,9 @@ name: Windows_Build
 # events but only for the master branch
 on:
   push:
-    branches: [ development ]
+    branches: [ master, development ]
   pull_request:
-    branches: [ development ]
+    branches: [ master, development ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
