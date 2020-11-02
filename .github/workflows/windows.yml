@@ -44,7 +44,7 @@ jobs:
       - name: Build OpenSkyCity
         run: |
           poetry shell
-          pyinstaller opencity.spec
+          python -m pyinstaller opencity.spec
       
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v2.2.0
