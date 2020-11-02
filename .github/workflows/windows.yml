@@ -44,7 +44,7 @@ jobs:
       - name: OpenCity Build
         run: |
           python -m pip install pyinstaller
-          python -m poetry shell && python -m pyinstaller opencity.spec
+          python -m poetry shell && pyinstaller opencity.spec
 
       
       - name: Upload a Build Artifact
