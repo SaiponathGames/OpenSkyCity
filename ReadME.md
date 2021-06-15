@@ -2,7 +2,7 @@ OpenSkyCity
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ______
 
-Note: This version of OpenSkyCity has been deprecated, Godot version of OpenSkyCity is being developed in a seperate repository.
+Note: This version of OpenSkyCity has been deprecated, Godot version of OpenSkyCity is being developed in a [seperate repository](https://github.com/OpenSkyCity/OpenSkyCity-Game).
 _______________________________________________________________________________________________________________________________
 
 WIP - Working In Progress 
